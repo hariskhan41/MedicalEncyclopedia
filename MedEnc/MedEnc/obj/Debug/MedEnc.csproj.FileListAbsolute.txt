@@ -1,0 +1,10 @@
+F:\UET\Internship\Medical Encyclopedia\MedEnc\MedEnc\bin\Debug\MedEnc.exe.config
+F:\UET\Internship\Medical Encyclopedia\MedEnc\MedEnc\bin\Debug\MedEnc.exe
+F:\UET\Internship\Medical Encyclopedia\MedEnc\MedEnc\bin\Debug\MedEnc.pdb
+F:\UET\Internship\Medical Encyclopedia\MedEnc\MedEnc\obj\Debug\MedEnc.csprojResolveAssemblyReference.cache
+F:\UET\Internship\Medical Encyclopedia\MedEnc\MedEnc\obj\Debug\MedEnc.Form1.resources
+F:\UET\Internship\Medical Encyclopedia\MedEnc\MedEnc\obj\Debug\MedEnc.Properties.Resources.resources
+F:\UET\Internship\Medical Encyclopedia\MedEnc\MedEnc\obj\Debug\MedEnc.csproj.GenerateResource.Cache
+F:\UET\Internship\Medical Encyclopedia\MedEnc\MedEnc\obj\Debug\MedEnc.exe
+F:\UET\Internship\Medical Encyclopedia\MedEnc\MedEnc\obj\Debug\MedEnc.pdb
+F:\UET\Internship\Medical Encyclopedia\MedEnc\MedEnc\obj\Debug\MedEnc.Form2.resources
