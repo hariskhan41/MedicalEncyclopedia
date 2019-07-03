@@ -8,3 +8,13 @@ F:\UET\Internship\Medical Encyclopedia\MedEnc\MedEnc\obj\Debug\MedEnc.csproj.Gen
 F:\UET\Internship\Medical Encyclopedia\MedEnc\MedEnc\obj\Debug\MedEnc.exe
 F:\UET\Internship\Medical Encyclopedia\MedEnc\MedEnc\obj\Debug\MedEnc.pdb
 F:\UET\Internship\Medical Encyclopedia\MedEnc\MedEnc\obj\Debug\MedEnc.Form2.resources
+E:\Internship\MedicalEncyclopedia\MedEnc\MedEnc\bin\Debug\MedEnc.exe.config
+E:\Internship\MedicalEncyclopedia\MedEnc\MedEnc\bin\Debug\MedEnc.exe
+E:\Internship\MedicalEncyclopedia\MedEnc\MedEnc\bin\Debug\MedEnc.pdb
+E:\Internship\MedicalEncyclopedia\MedEnc\MedEnc\obj\Debug\MedEnc.csprojAssemblyReference.cache
+E:\Internship\MedicalEncyclopedia\MedEnc\MedEnc\obj\Debug\MedEnc.Form1.resources
+E:\Internship\MedicalEncyclopedia\MedEnc\MedEnc\obj\Debug\MedEnc.Properties.Resources.resources
+E:\Internship\MedicalEncyclopedia\MedEnc\MedEnc\obj\Debug\MedEnc.csproj.GenerateResource.cache
+E:\Internship\MedicalEncyclopedia\MedEnc\MedEnc\obj\Debug\MedEnc.csproj.CoreCompileInputs.cache
+E:\Internship\MedicalEncyclopedia\MedEnc\MedEnc\obj\Debug\MedEnc.exe
+E:\Internship\MedicalEncyclopedia\MedEnc\MedEnc\obj\Debug\MedEnc.pdb
