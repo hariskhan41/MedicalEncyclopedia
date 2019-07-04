@@ -1,0 +1,10 @@
+E:\Internship\med_enc\med_enc\bin\Debug\med_enc.exe.config
+E:\Internship\med_enc\med_enc\bin\Debug\med_enc.exe
+E:\Internship\med_enc\med_enc\bin\Debug\med_enc.pdb
+E:\Internship\med_enc\med_enc\obj\Debug\med_enc.csprojAssemblyReference.cache
+E:\Internship\med_enc\med_enc\obj\Debug\med_enc.Form1.resources
+E:\Internship\med_enc\med_enc\obj\Debug\med_enc.Properties.Resources.resources
+E:\Internship\med_enc\med_enc\obj\Debug\med_enc.csproj.GenerateResource.cache
+E:\Internship\med_enc\med_enc\obj\Debug\med_enc.csproj.CoreCompileInputs.cache
+E:\Internship\med_enc\med_enc\obj\Debug\med_enc.exe
+E:\Internship\med_enc\med_enc\obj\Debug\med_enc.pdb
