@@ -8,3 +8,17 @@ E:\Internship\med_enc\med_enc\obj\Debug\med_enc.csproj.GenerateResource.cache
 E:\Internship\med_enc\med_enc\obj\Debug\med_enc.csproj.CoreCompileInputs.cache
 E:\Internship\med_enc\med_enc\obj\Debug\med_enc.exe
 E:\Internship\med_enc\med_enc\obj\Debug\med_enc.pdb
+F:\UET\Internship\Medical Encyclopedia\MedicalEnc\med_enc\med_enc\bin\Debug\med_enc.exe.config
+F:\UET\Internship\Medical Encyclopedia\MedicalEnc\med_enc\med_enc\obj\Debug\med_enc.exe
+F:\UET\Internship\Medical Encyclopedia\MedicalEnc\med_enc\med_enc\obj\Debug\med_enc.pdb
+F:\UET\Internship\Medical Encyclopedia\MedicalEnc\med_enc\med_enc\bin\Debug\med_enc.exe
+F:\UET\Internship\Medical Encyclopedia\MedicalEnc\med_enc\med_enc\bin\Debug\med_enc.pdb
+F:\UET\Internship\Medical Encyclopedia\MedicalEnc\med_enc\med_enc\bin\Debug\EntityFramework.dll
+F:\UET\Internship\Medical Encyclopedia\MedicalEnc\med_enc\med_enc\bin\Debug\EntityFramework.SqlServer.dll
+F:\UET\Internship\Medical Encyclopedia\MedicalEnc\med_enc\med_enc\bin\Debug\EntityFramework.xml
+F:\UET\Internship\Medical Encyclopedia\MedicalEnc\med_enc\med_enc\bin\Debug\EntityFramework.SqlServer.xml
+F:\UET\Internship\Medical Encyclopedia\MedicalEnc\med_enc\med_enc\obj\Debug\med_enc.csprojResolveAssemblyReference.cache
+F:\UET\Internship\Medical Encyclopedia\MedicalEnc\med_enc\med_enc\obj\Debug\med_enc.Properties.Resources.resources
+F:\UET\Internship\Medical Encyclopedia\MedicalEnc\med_enc\med_enc\obj\Debug\med_enc.csproj.GenerateResource.Cache
+F:\UET\Internship\Medical Encyclopedia\MedicalEnc\med_enc\med_enc\obj\Debug\med_enc.MainPage.resources
+F:\UET\Internship\Medical Encyclopedia\MedicalEnc\med_enc\med_enc\obj\Debug\med_enc.Categories.resources
