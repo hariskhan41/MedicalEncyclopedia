@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>med_enc</RootNamespace>
     <AssemblyName>med_enc</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -58,19 +59,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AspNetRole.cs">
-      <DependentUpon>MedDbEntityModel.tt</DependentUpon>
+      <DependentUpon>MedDbEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="AspNetUser.cs">
-      <DependentUpon>MedDbEntityModel.tt</DependentUpon>
+      <DependentUpon>MedDbEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="AspNetUserClaim.cs">
-      <DependentUpon>MedDbEntityModel.tt</DependentUpon>
+      <DependentUpon>MedDbEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="AspNetUserLogin.cs">
-      <DependentUpon>MedDbEntityModel.tt</DependentUpon>
+      <DependentUpon>MedDbEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="AspNetUserRole.cs">
-      <DependentUpon>MedDbEntityModel.tt</DependentUpon>
+      <DependentUpon>MedDbEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="CatagoryDetails.cs" />
     <Compile Include="Categories.cs">
@@ -80,13 +81,13 @@
       <DependentUpon>Categories.cs</DependentUpon>
     </Compile>
     <Compile Include="Category.cs">
-      <DependentUpon>MedDbEntityModel.tt</DependentUpon>
+      <DependentUpon>MedDbEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Disease.cs">
-      <DependentUpon>MedDbEntityModel.tt</DependentUpon>
+      <DependentUpon>MedDbEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="DiseaseMedicine.cs">
-      <DependentUpon>MedDbEntityModel.tt</DependentUpon>
+      <DependentUpon>MedDbEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Diseases.cs" />
     <Compile Include="Form1.cs">
@@ -100,40 +101,40 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MedDbDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="MedDbEntityModel.Context.cs">
+    <Compile Include="MedDbDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MedDbEntityModel.Context.tt</DependentUpon>
+      <DependentUpon>MedDbDataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="MedDbEntityModel.cs">
+    <Compile Include="MedDbEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MedDbEntityModel.tt</DependentUpon>
+      <DependentUpon>MedDbEntities.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="MedDbEntityModel.Designer.cs">
+    <Compile Include="MedDbEntities.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MedDbEntityModel.edmx</DependentUpon>
+      <DependentUpon>MedDbEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MedDbEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedDbEntities.edmx</DependentUpon>
     </Compile>
     <Compile Include="Medicine.cs">
-      <DependentUpon>MedDbEntityModel.tt</DependentUpon>
+      <DependentUpon>MedDbEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reason.cs">
-      <DependentUpon>MedDbEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>MedDbEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>MedDbEntityModel.tt</DependentUpon>
+      <DependentUpon>MedDbEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Symptom.cs">
-      <DependentUpon>MedDbEntityModel.tt</DependentUpon>
+      <DependentUpon>MedDbEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Symptoms.cs" />
     <Compile Include="sysdiagram.cs">
-      <DependentUpon>MedDbEntityModel.tt</DependentUpon>
+      <DependentUpon>MedDbEntities.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Categories.resx">
       <DependentUpon>Categories.cs</DependentUpon>
@@ -149,11 +150,8 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="MedDbEntityModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MedDbEntityModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="MedDbDataSet.xsc">
       <DependentUpon>MedDbDataSet.xsd</DependentUpon>
     </None>
@@ -165,8 +163,23 @@
     <None Include="MedDbDataSet.xss">
       <DependentUpon>MedDbDataSet.xsd</DependentUpon>
     </None>
-    <None Include="MedDbEntityModel.edmx.diagram">
-      <DependentUpon>MedDbEntityModel.edmx</DependentUpon>
+    <None Include="MedDbDataSet1.xsc">
+      <DependentUpon>MedDbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="MedDbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedDbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedDbDataSet1.xss">
+      <DependentUpon>MedDbDataSet1.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="MedDbEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MedDbEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="MedDbEntities.edmx.diagram">
+      <DependentUpon>MedDbEntities.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -183,19 +196,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MedDbEntityModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MedDbEntityModel.edmx</DependentUpon>
-      <LastGenOutput>MedDbEntityModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="MedDbEntityModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MedDbEntityModel.edmx</DependentUpon>
-      <LastGenOutput>MedDbEntityModel.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="MedDbEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MedDbEntities.edmx</DependentUpon>
+      <LastGenOutput>MedDbEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="MedDbEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MedDbEntities.edmx</DependentUpon>
+      <LastGenOutput>MedDbEntities.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

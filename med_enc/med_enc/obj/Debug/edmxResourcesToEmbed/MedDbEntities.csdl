@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MedDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AspNetUserRole">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RoleId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="0" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Text" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+    <Property Name="ParentId" Type="Int32" />
+    <NavigationProperty Name="Diseases" Relationship="Self.FK_Disease_Category" FromRole="Category" ToRole="Disease" />
+  </EntityType>
+  <EntityType Name="Disease">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EnglishName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UrduName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AddedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryId" Type="Int32" />
+    <NavigationProperty Name="Category" Relationship="Self.FK_Disease_Category" FromRole="Disease" ToRole="Category" />
+    <NavigationProperty Name="DiseaseMedicines" Relationship="Self.FK_DiseaseMedicines_Disease" FromRole="Disease" ToRole="DiseaseMedicines" />
+    <NavigationProperty Name="Symptoms" Relationship="Self.DiseaseSymptoms" FromRole="Disease" ToRole="Symptoms" />
+    <NavigationProperty Name="Reasons" Relationship="Self.MedicineReasons" FromRole="Disease" ToRole="Reason" />
+  </EntityType>
+  <EntityType Name="DiseaseMedicine">
+    <Key>
+      <PropertyRef Name="DiseaseId" />
+      <PropertyRef Name="MedicineId" />
+    </Key>
+    <Property Name="DiseaseId" Type="Int32" Nullable="false" />
+    <Property Name="MedicineId" Type="Int32" Nullable="false" />
+    <Property Name="DoctorRecommendations" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Disease" Relationship="Self.FK_DiseaseMedicines_Disease" FromRole="DiseaseMedicines" ToRole="Disease" />
+    <NavigationProperty Name="Medicine" Relationship="Self.FK_DiseaseMedicines_Medicines" FromRole="DiseaseMedicines" ToRole="Medicines" />
+  </EntityType>
+  <EntityType Name="Medicine">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MedName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Potency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="DiseaseMedicines" Relationship="Self.FK_DiseaseMedicines_Medicines" FromRole="Medicines" ToRole="DiseaseMedicines" />
+  </EntityType>
+  <EntityType Name="Reason">
+    <Key>
+      <PropertyRef Name="ReasonId" />
+    </Key>
+    <Property Name="ReasonId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReasonName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Diseases" Relationship="Self.MedicineReasons" FromRole="Reason" ToRole="Disease" />
+  </EntityType>
+  <EntityType Name="Symptom">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SymptomName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Diseases" Relationship="Self.DiseaseSymptoms" FromRole="Symptoms" ToRole="Disease" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogin">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProviderKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Disease_Category">
+    <End Role="Category" Type="Self.Category" Multiplicity="0..1" />
+    <End Role="Disease" Type="Self.Disease" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Disease">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DiseaseMedicines_Disease">
+    <End Role="Disease" Type="Self.Disease" Multiplicity="1" />
+    <End Role="DiseaseMedicines" Type="Self.DiseaseMedicine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Disease">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DiseaseMedicines">
+        <PropertyRef Name="DiseaseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DiseaseMedicines_Medicines">
+    <End Role="Medicines" Type="Self.Medicine" Multiplicity="1" />
+    <End Role="DiseaseMedicines" Type="Self.DiseaseMedicine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Medicines">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DiseaseMedicines">
+        <PropertyRef Name="MedicineId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DiseaseSymptoms">
+    <End Role="Disease" Type="Self.Disease" Multiplicity="*" />
+    <End Role="Symptoms" Type="Self.Symptom" Multiplicity="*" />
+  </Association>
+  <Association Name="MedicineReasons">
+    <End Role="Disease" Type="Self.Disease" Multiplicity="*" />
+    <End Role="Reason" Type="Self.Reason" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="MedDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRole" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaim" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRole" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="Diseases" EntityType="Self.Disease" />
+    <EntitySet Name="DiseaseMedicines" EntityType="Self.DiseaseMedicine" />
+    <EntitySet Name="Medicines" EntityType="Self.Medicine" />
+    <EntitySet Name="Reasons" EntityType="Self.Reason" />
+    <EntitySet Name="Symptoms" EntityType="Self.Symptom" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogin" />
+    <AssociationSet Name="FK_Disease_Category" Association="Self.FK_Disease_Category">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Disease" EntitySet="Diseases" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DiseaseMedicines_Disease" Association="Self.FK_DiseaseMedicines_Disease">
+      <End Role="Disease" EntitySet="Diseases" />
+      <End Role="DiseaseMedicines" EntitySet="DiseaseMedicines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DiseaseMedicines_Medicines" Association="Self.FK_DiseaseMedicines_Medicines">
+      <End Role="Medicines" EntitySet="Medicines" />
+      <End Role="DiseaseMedicines" EntitySet="DiseaseMedicines" />
+    </AssociationSet>
+    <AssociationSet Name="DiseaseSymptoms" Association="Self.DiseaseSymptoms">
+      <End Role="Disease" EntitySet="Diseases" />
+      <End Role="Symptoms" EntitySet="Symptoms" />
+    </AssociationSet>
+    <AssociationSet Name="MedicineReasons" Association="Self.MedicineReasons">
+      <End Role="Disease" EntitySet="Diseases" />
+      <End Role="Reason" EntitySet="Reasons" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

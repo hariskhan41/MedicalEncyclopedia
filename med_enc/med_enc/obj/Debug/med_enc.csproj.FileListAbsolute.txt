@@ -22,3 +22,47 @@ F:\UET\Internship\Medical Encyclopedia\MedicalEnc\med_enc\med_enc\obj\Debug\med_
 F:\UET\Internship\Medical Encyclopedia\MedicalEnc\med_enc\med_enc\obj\Debug\med_enc.csproj.GenerateResource.Cache
 F:\UET\Internship\Medical Encyclopedia\MedicalEnc\med_enc\med_enc\obj\Debug\med_enc.MainPage.resources
 F:\UET\Internship\Medical Encyclopedia\MedicalEnc\med_enc\med_enc\obj\Debug\med_enc.Categories.resources
+F:\UET\Internship\Saad1(Symptoms)\med_enc\med_enc\bin\Debug\med_enc.exe.config
+F:\UET\Internship\Saad1(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.exe
+F:\UET\Internship\Saad1(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.pdb
+F:\UET\Internship\Saad1(Symptoms)\med_enc\med_enc\bin\Debug\med_enc.exe
+F:\UET\Internship\Saad1(Symptoms)\med_enc\med_enc\bin\Debug\med_enc.pdb
+F:\UET\Internship\Saad1(Symptoms)\med_enc\med_enc\bin\Debug\EntityFramework.dll
+F:\UET\Internship\Saad1(Symptoms)\med_enc\med_enc\bin\Debug\EntityFramework.SqlServer.dll
+F:\UET\Internship\Saad1(Symptoms)\med_enc\med_enc\bin\Debug\EntityFramework.xml
+F:\UET\Internship\Saad1(Symptoms)\med_enc\med_enc\bin\Debug\EntityFramework.SqlServer.xml
+F:\UET\Internship\Saad1(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.csprojResolveAssemblyReference.cache
+F:\UET\Internship\Saad1(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.Categories.resources
+F:\UET\Internship\Saad1(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.MainPage.resources
+F:\UET\Internship\Saad1(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.Properties.Resources.resources
+F:\UET\Internship\Saad1(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.csproj.GenerateResource.Cache
+F:\UET\Internship\(Symptoms)\med_enc\med_enc\bin\Debug\med_enc.exe.config
+F:\UET\Internship\(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.exe
+F:\UET\Internship\(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.pdb
+F:\UET\Internship\(Symptoms)\med_enc\med_enc\bin\Debug\med_enc.exe
+F:\UET\Internship\(Symptoms)\med_enc\med_enc\bin\Debug\med_enc.pdb
+F:\UET\Internship\(Symptoms)\med_enc\med_enc\bin\Debug\EntityFramework.dll
+F:\UET\Internship\(Symptoms)\med_enc\med_enc\bin\Debug\EntityFramework.SqlServer.dll
+F:\UET\Internship\(Symptoms)\med_enc\med_enc\bin\Debug\EntityFramework.xml
+F:\UET\Internship\(Symptoms)\med_enc\med_enc\bin\Debug\EntityFramework.SqlServer.xml
+F:\UET\Internship\(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.csprojResolveAssemblyReference.cache
+F:\UET\Internship\(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.Categories.resources
+F:\UET\Internship\(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.MainPage.resources
+F:\UET\Internship\(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.Properties.Resources.resources
+F:\UET\Internship\(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.csproj.GenerateResource.Cache
+E:\Internship\Internship\(Symptoms)\med_enc\med_enc\bin\Debug\med_enc.exe.config
+E:\Internship\Internship\(Symptoms)\med_enc\med_enc\bin\Debug\med_enc.exe
+E:\Internship\Internship\(Symptoms)\med_enc\med_enc\bin\Debug\med_enc.pdb
+E:\Internship\Internship\(Symptoms)\med_enc\med_enc\bin\Debug\EntityFramework.dll
+E:\Internship\Internship\(Symptoms)\med_enc\med_enc\bin\Debug\EntityFramework.SqlServer.dll
+E:\Internship\Internship\(Symptoms)\med_enc\med_enc\bin\Debug\EntityFramework.xml
+E:\Internship\Internship\(Symptoms)\med_enc\med_enc\bin\Debug\EntityFramework.SqlServer.xml
+E:\Internship\Internship\(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.csprojAssemblyReference.cache
+E:\Internship\Internship\(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.Categories.resources
+E:\Internship\Internship\(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.MainPage.resources
+E:\Internship\Internship\(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.Properties.Resources.resources
+E:\Internship\Internship\(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.csproj.GenerateResource.cache
+E:\Internship\Internship\(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.csproj.CoreCompileInputs.cache
+E:\Internship\Internship\(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.csproj.CopyComplete
+E:\Internship\Internship\(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.exe
+E:\Internship\Internship\(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.pdb

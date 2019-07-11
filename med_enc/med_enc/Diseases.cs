@@ -21,6 +21,21 @@ namespace med_enc
 
         public string categoryName { get; set; }
 
+        public string errorUrduName { get; set; }
+
+        public string errorEnglishName { get; set; }
+
+        public bool NameHasDigit(string name)
+        {
+            foreach (char c in name)
+            {
+                if (char.IsDigit(c))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
         public void AddCategoryToCombobox(ComboBox cmb)
         {
@@ -59,12 +74,40 @@ namespace med_enc
             return false;
         }
 
+        public int getDiseaseIdFromName(string name)
+        {
+            int id = 0;
+            MedDbEntities db = new MedDbEntities();
+            foreach (Disease d in db.Diseases)
+            {
+                if (d.UrduName == name)
+                {
+                    id = d.Id;
+                }
+            }
+            return id;
+        }
+
         public bool Add()
         {
             MedDbEntities db = new MedDbEntities();
             Disease diseaseTbl = new Disease();
             if (DiseaseAlreadyExist(englishName, urduName) == true)
             {
+                errorEnglishName = "بیماری پہلے سے موجود ہے";
+                errorUrduName = "بیماری پہلے سے موجود ہے";
+                return false;
+            }
+            else if (NameHasDigit(urduName) == true || NameHasDigit(englishName) == true)
+            {
+                if (NameHasDigit(urduName))
+                {
+                    errorUrduName = "بیماری کا نام درست نہیں";
+                }
+                if (NameHasDigit(englishName))
+                {
+                    errorEnglishName = "بیماری کا نام درست نہیں";
+                }
                 return false;
             }
             else
@@ -85,6 +128,8 @@ namespace med_enc
                 }
                 db.Diseases.Add(diseaseTbl);
                 db.SaveChanges();
+                errorEnglishName = "";
+                errorUrduName = "";
                 return true;
             }
         }

@@ -25,8 +25,8 @@ namespace med_enc
         public int Id { get; set; }
         public string EnglishName { get; set; }
         public string UrduName { get; set; }
-        public DateTime AddedOn { get; set; }
-        public DateTime UpdatedOn { get; set; }
+        public Nullable<System.DateTime> AddedOn { get; set; }
+        public Nullable<System.DateTime> UpdatedOn { get; set; }
         public string Description { get; set; }
         public Nullable<int> CategoryId { get; set; }
     
