@@ -12,6 +12,7 @@ namespace med_enc
 {
     public partial class MainPage : Form
     {
+        public bool errorFlag = false;
         public MainPage()
         {
             InitializeComponent();
@@ -54,10 +55,25 @@ namespace med_enc
                 lbl_ErrorUrduName.ForeColor = System.Drawing.Color.Red;
                 txt_DiseaseEnglishName.Clear();
                 txt_DiseaseUrduName.Clear();
+                errorFlag = true;
+            }
+            Symptoms s = new Symptoms();
+            if (Symptoms.lstSym.Count == 0)
+            {
+                lbl_ErrorSymptom.Text = "علامت کا انتخاب کریں";
+                lbl_ErrorSymptom.ForeColor = System.Drawing.Color.Red;
+                errorFlag = true;
+            }
+            if (errorFlag == true)
+            {
+                MessageBox.Show("تفصیلات درست نہیں۔ تمام ٹیب دوبارہ دیکھیں۔ غلطیاں نمایاں کر دی گیؑ ہیں");
                 return;
             }
+            
 
-            Symptoms s = new Symptoms();
+
+
+
             s.AddSymptomsToDb();
 
             List<string> lstSymName = new List<string>();
@@ -69,24 +85,27 @@ namespace med_enc
 
             foreach (string s3 in lstSymName)
             {
+                MedDbEntities db1 = new MedDbEntities();
                 int diseaseId = d.getDiseaseIdFromName(d.urduName);
                 int symId = s.getSymIdFromName(s3);
                 Disease dt = new Disease();
                 dt.Id = diseaseId;
-                db.Diseases.Add(dt);
-                db.Diseases.Attach(dt);
+                db1.Diseases.Add(dt);
+                db1.Diseases.Attach(dt);
                 Symptom st = new Symptom();
                 st.Id = symId;
-                db.Symptoms.Add(st);
-                db.Symptoms.Attach(st);
+                db1.Symptoms.Add(st);
+                db1.Symptoms.Attach(st);
                 dt.Symptoms.Add(st);
-                db.SaveChanges();
+                db1.SaveChanges();
             }
-            
+            Symptoms.lstSym.Clear();
+            dgv_symptoms.DataSource = null;
+            dgv_symptoms.Rows.Clear();
 
-            
 
             MessageBox.Show("تفصیلات محفوظ ہو چکی ہیں");
+            
             
 
             //if (d.Add() == true)

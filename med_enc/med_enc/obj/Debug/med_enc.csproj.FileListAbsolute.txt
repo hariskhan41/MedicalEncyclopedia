@@ -66,3 +66,17 @@ E:\Internship\Internship\(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.csproj.Cor
 E:\Internship\Internship\(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.csproj.CopyComplete
 E:\Internship\Internship\(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.exe
 E:\Internship\Internship\(Symptoms)\med_enc\med_enc\obj\Debug\med_enc.pdb
+C:\Users\haris\Desktop\medicalencyclopedia\med_enc\med_enc\bin\Debug\med_enc.exe.config
+C:\Users\haris\Desktop\medicalencyclopedia\med_enc\med_enc\obj\Debug\med_enc.exe
+C:\Users\haris\Desktop\medicalencyclopedia\med_enc\med_enc\obj\Debug\med_enc.pdb
+C:\Users\haris\Desktop\medicalencyclopedia\med_enc\med_enc\bin\Debug\med_enc.exe
+C:\Users\haris\Desktop\medicalencyclopedia\med_enc\med_enc\bin\Debug\med_enc.pdb
+C:\Users\haris\Desktop\medicalencyclopedia\med_enc\med_enc\bin\Debug\EntityFramework.dll
+C:\Users\haris\Desktop\medicalencyclopedia\med_enc\med_enc\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\haris\Desktop\medicalencyclopedia\med_enc\med_enc\bin\Debug\EntityFramework.xml
+C:\Users\haris\Desktop\medicalencyclopedia\med_enc\med_enc\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\haris\Desktop\medicalencyclopedia\med_enc\med_enc\obj\Debug\med_enc.csprojResolveAssemblyReference.cache
+C:\Users\haris\Desktop\medicalencyclopedia\med_enc\med_enc\obj\Debug\med_enc.Categories.resources
+C:\Users\haris\Desktop\medicalencyclopedia\med_enc\med_enc\obj\Debug\med_enc.MainPage.resources
+C:\Users\haris\Desktop\medicalencyclopedia\med_enc\med_enc\obj\Debug\med_enc.Properties.Resources.resources
+C:\Users\haris\Desktop\medicalencyclopedia\med_enc\med_enc\obj\Debug\med_enc.csproj.GenerateResource.Cache

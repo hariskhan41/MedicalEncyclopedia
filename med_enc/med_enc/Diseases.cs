@@ -127,6 +127,9 @@ namespace med_enc
                     diseaseTbl.CategoryId = null;
                 }
                 db.Diseases.Add(diseaseTbl);
+                //Symptom a = db.Symptoms.Find(13);
+                //diseaseTbl.Symptoms.Add(a);
+
                 db.SaveChanges();
                 errorEnglishName = "";
                 errorUrduName = "";
