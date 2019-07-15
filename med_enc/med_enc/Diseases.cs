@@ -9,9 +9,9 @@ namespace med_enc
 {
     class Diseases
     {
-        public string englishName { get; set; }
+        public string englishName { get; set; } = "";
 
-        public string urduName { get; set; }
+        public string urduName { get; set; } = "";
 
         public DateTime addedOn { get; set; }
 
@@ -88,15 +88,15 @@ namespace med_enc
             return id;
         }
 
-        public bool Add()
+        public void Add(MedDbEntities db)
         {
-            MedDbEntities db = new MedDbEntities();
+            
             Disease diseaseTbl = new Disease();
             if (DiseaseAlreadyExist(englishName, urduName) == true)
             {
                 errorEnglishName = "بیماری پہلے سے موجود ہے";
                 errorUrduName = "بیماری پہلے سے موجود ہے";
-                return false;
+                return;
             }
             else if (NameHasDigit(urduName) == true || NameHasDigit(englishName) == true)
             {
@@ -108,7 +108,7 @@ namespace med_enc
                 {
                     errorEnglishName = "بیماری کا نام درست نہیں";
                 }
-                return false;
+                return;
             }
             else
             {
@@ -130,10 +130,10 @@ namespace med_enc
                 //Symptom a = db.Symptoms.Find(13);
                 //diseaseTbl.Symptoms.Add(a);
 
-                db.SaveChanges();
+                //db.SaveChanges();
                 errorEnglishName = "";
                 errorUrduName = "";
-                return true;
+                return;
             }
         }
 

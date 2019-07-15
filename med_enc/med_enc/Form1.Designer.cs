@@ -73,11 +73,17 @@
             this.cmb_Symptom = new System.Windows.Forms.ComboBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_AddCause = new System.Windows.Forms.Button();
+            this.dgv_Causes = new System.Windows.Forms.DataGridView();
+            this.reasonIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reasonNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeleteReason = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.reasonBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.medDbDataSet2 = new med_enc.MedDbDataSet2();
+            this.lbl_errorCauseName = new System.Windows.Forms.Label();
+            this.cmb_CauseName = new System.Windows.Forms.ComboBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -108,7 +114,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.symptomsTableAdapter = new med_enc.MedDbDataSet1TableAdapters.SymptomsTableAdapter();
-            this.lbl_errorCauses = new System.Windows.Forms.Label();
+            this.reasonTableAdapter = new med_enc.MedDbDataSet2TableAdapters.ReasonTableAdapter();
             this.TaskbarPanel.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -126,7 +132,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.medDbDataSet1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Causes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reasonBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medDbDataSet2)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
@@ -519,6 +527,7 @@
             this.dgv_symptoms.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_symptoms.AutoGenerateColumns = false;
             this.dgv_symptoms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_symptoms.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgv_symptoms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_symptoms.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -611,12 +620,12 @@
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 660F));
-            this.tableLayoutPanel3.Controls.Add(this.textBox4, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label2, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.button6, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.dataGridView2, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.lbl_errorCauses, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.btn_AddCause, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.dgv_Causes, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_errorCauseName, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.cmb_CauseName, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 3);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -630,25 +639,16 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(799, 506);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
-            // textBox4
+            // label8
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(2, 8);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(656, 34);
-            this.textBox4.TabIndex = 3;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(2, 129);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(656, 294);
-            this.dataGridView2.TabIndex = 15;
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(662, 11);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(135, 27);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "سبب";
             // 
             // label2
             // 
@@ -661,26 +661,88 @@
             this.label2.Text = "بیماری میں درج کئے گئے اسباب";
             this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
-            // button6
+            // btn_AddCause
             // 
-            this.button6.Location = new System.Drawing.Point(516, 78);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(142, 36);
-            this.button6.TabIndex = 17;
-            this.button6.Text = "بیماری کا سبب درج کریں";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btn_AddCause.Location = new System.Drawing.Point(516, 78);
+            this.btn_AddCause.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btn_AddCause.Name = "btn_AddCause";
+            this.btn_AddCause.Size = new System.Drawing.Size(142, 36);
+            this.btn_AddCause.TabIndex = 17;
+            this.btn_AddCause.Text = "بیماری کا سبب درج کریں";
+            this.btn_AddCause.UseVisualStyleBackColor = true;
+            this.btn_AddCause.Click += new System.EventHandler(this.btn_AddCause_Click);
             // 
-            // label8
+            // dgv_Causes
             // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(662, 11);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(135, 27);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "سبب";
+            this.dgv_Causes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Causes.AutoGenerateColumns = false;
+            this.dgv_Causes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Causes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgv_Causes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Causes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.reasonIdDataGridViewTextBoxColumn,
+            this.reasonNameDataGridViewTextBoxColumn,
+            this.DeleteReason});
+            this.dgv_Causes.DataSource = this.reasonBindingSource;
+            this.dgv_Causes.Location = new System.Drawing.Point(2, 129);
+            this.dgv_Causes.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.dgv_Causes.Name = "dgv_Causes";
+            this.dgv_Causes.Size = new System.Drawing.Size(656, 294);
+            this.dgv_Causes.TabIndex = 15;
+            this.dgv_Causes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Causes_CellContentClick);
+            // 
+            // reasonIdDataGridViewTextBoxColumn
+            // 
+            this.reasonIdDataGridViewTextBoxColumn.DataPropertyName = "ReasonId";
+            this.reasonIdDataGridViewTextBoxColumn.HeaderText = "ReasonId";
+            this.reasonIdDataGridViewTextBoxColumn.Name = "reasonIdDataGridViewTextBoxColumn";
+            this.reasonIdDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // reasonNameDataGridViewTextBoxColumn
+            // 
+            this.reasonNameDataGridViewTextBoxColumn.DataPropertyName = "ReasonName";
+            this.reasonNameDataGridViewTextBoxColumn.HeaderText = "سبب";
+            this.reasonNameDataGridViewTextBoxColumn.Name = "reasonNameDataGridViewTextBoxColumn";
+            // 
+            // DeleteReason
+            // 
+            this.DeleteReason.DataPropertyName = "ReasonId";
+            this.DeleteReason.HeaderText = "حزف کریں";
+            this.DeleteReason.Name = "DeleteReason";
+            this.DeleteReason.ReadOnly = true;
+            this.DeleteReason.Text = "حزف کریں";
+            this.DeleteReason.UseColumnTextForButtonValue = true;
+            // 
+            // reasonBindingSource
+            // 
+            this.reasonBindingSource.DataMember = "Reason";
+            this.reasonBindingSource.DataSource = this.medDbDataSet2;
+            // 
+            // medDbDataSet2
+            // 
+            this.medDbDataSet2.DataSetName = "MedDbDataSet2";
+            this.medDbDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lbl_errorCauseName
+            // 
+            this.lbl_errorCauseName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_errorCauseName.AutoSize = true;
+            this.lbl_errorCauseName.Font = new System.Drawing.Font("Jameel Noori Nastaleeq", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_errorCauseName.Location = new System.Drawing.Point(3, 51);
+            this.lbl_errorCauseName.Name = "lbl_errorCauseName";
+            this.lbl_errorCauseName.Size = new System.Drawing.Size(654, 22);
+            this.lbl_errorCauseName.TabIndex = 20;
+            // 
+            // cmb_CauseName
+            // 
+            this.cmb_CauseName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_CauseName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cmb_CauseName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmb_CauseName.FormattingEnabled = true;
+            this.cmb_CauseName.Location = new System.Drawing.Point(3, 14);
+            this.cmb_CauseName.Name = "cmb_CauseName";
+            this.cmb_CauseName.Size = new System.Drawing.Size(654, 35);
+            this.cmb_CauseName.TabIndex = 21;
             // 
             // tabPage3
             // 
@@ -792,7 +854,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 27);
             this.label1.TabIndex = 16;
-            this.label1.Text = "بیماری میںدرج کیا گیا دیسی علاج";
+            this.label1.Text = "بیماری میں درج کیا گیا دیسی علاج";
             // 
             // tabPage4
             // 
@@ -1025,15 +1087,9 @@
             // 
             this.symptomsTableAdapter.ClearBeforeFill = true;
             // 
-            // lbl_errorCauses
+            // reasonTableAdapter
             // 
-            this.lbl_errorCauses.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_errorCauses.AutoSize = true;
-            this.lbl_errorCauses.Font = new System.Drawing.Font("Jameel Noori Nastaleeq", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_errorCauses.Location = new System.Drawing.Point(3, 51);
-            this.lbl_errorCauses.Name = "lbl_errorCauses";
-            this.lbl_errorCauses.Size = new System.Drawing.Size(654, 22);
-            this.lbl_errorCauses.TabIndex = 20;
+            this.reasonTableAdapter.ClearBeforeFill = true;
             // 
             // MainPage
             // 
@@ -1070,7 +1126,9 @@
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Causes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reasonBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.medDbDataSet2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
@@ -1125,10 +1183,9 @@
         private System.Windows.Forms.Label lbl_ErrorSymptom;
         private System.Windows.Forms.Button btn_AddSymptoms;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgv_Causes;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn_AddCause;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.TextBox textBox6;
@@ -1169,7 +1226,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn symptomNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private System.Windows.Forms.Label lbl_errorCauses;
+        private System.Windows.Forms.Label lbl_errorCauseName;
+        private System.Windows.Forms.ComboBox cmb_CauseName;
+        private MedDbDataSet2 medDbDataSet2;
+        private System.Windows.Forms.BindingSource reasonBindingSource;
+        private MedDbDataSet2TableAdapters.ReasonTableAdapter reasonTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reasonIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reasonNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn DeleteReason;
     }
 }
 

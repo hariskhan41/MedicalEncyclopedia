@@ -83,6 +83,7 @@
     <Compile Include="Category.cs">
       <DependentUpon>MedDbEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Causes.cs" />
     <Compile Include="Disease.cs">
       <DependentUpon>MedDbEntities.tt</DependentUpon>
     </Compile>
@@ -105,6 +106,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MedDbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedDbDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedDbDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="MedDbEntities.Context.cs">
       <AutoGen>True</AutoGen>
@@ -178,6 +184,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>MedDbEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="MedDbDataSet2.xsc">
+      <DependentUpon>MedDbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MedDbDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedDbDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedDbDataSet2.xss">
+      <DependentUpon>MedDbDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="MedDbEntities.edmx.diagram">
       <DependentUpon>MedDbEntities.edmx</DependentUpon>
     </None>

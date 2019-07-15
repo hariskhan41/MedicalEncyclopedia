@@ -45,7 +45,8 @@ namespace med_enc
             d.urduName = txt_DiseaseUrduName.Text;
             d.description = txt_DiseaseDetails.Text;
             d.categoryName = cmb_DiseaseCategory.Text;
-            if (d.Add() == false)
+            d.Add(db);
+            if (d.errorUrduName != "" || d.errorEnglishName != "")
             {
                 cmb_DiseaseCategory.Items.Clear();
                 d.AddCategoryToCombobox(cmb_DiseaseCategory);
@@ -64,15 +65,21 @@ namespace med_enc
                 lbl_ErrorSymptom.ForeColor = System.Drawing.Color.Red;
                 errorFlag = true;
             }
+            if (Causes.lstCause.Count == 0)
+            {
+                lbl_errorCauseName.Text = "سبب کا ینتخاب کریں";
+                lbl_errorCauseName.ForeColor = System.Drawing.Color.Red;
+                errorFlag = true;
+            }
             if (errorFlag == true)
             {
                 MessageBox.Show("تفصیلات درست نہیں۔ تمام ٹیب دوبارہ دیکھیں۔ غلطیاں نمایاں کر دی گیؑ ہیں");
                 return;
             }
-            
 
 
 
+            db.SaveChanges();
 
             s.AddSymptomsToDb();
 
@@ -83,10 +90,12 @@ namespace med_enc
                 lstSymName.Add(s2);
             }
 
+            int diseaseId = d.getDiseaseIdFromName(d.urduName);
+
             foreach (string s3 in lstSymName)
             {
                 MedDbEntities db1 = new MedDbEntities();
-                int diseaseId = d.getDiseaseIdFromName(d.urduName);
+
                 int symId = s.getSymIdFromName(s3);
                 Disease dt = new Disease();
                 dt.Id = diseaseId;
@@ -102,6 +111,38 @@ namespace med_enc
             Symptoms.lstSym.Clear();
             dgv_symptoms.DataSource = null;
             dgv_symptoms.Rows.Clear();
+
+
+
+            Causes c = new Causes();
+            c.AddCauseToDb();
+
+            List<string> lstCauseName = new List<string>();
+            foreach (Causes c1 in Causes.lstCause)
+            {
+                string ctemp1 = c1.ReasonName;
+                lstCauseName.Add(ctemp1);
+            }
+
+            foreach (string s4 in lstCauseName)
+            {
+                MedDbEntities db2 = new MedDbEntities();
+
+                int causeId = c.getReasonIdFromName(s4);
+                Disease dt = new Disease();
+                dt.Id = diseaseId;
+                db2.Diseases.Add(dt);
+                db2.Diseases.Attach(dt);
+                Reason rt = new Reason();
+                rt.ReasonId = causeId;
+                db2.Reasons.Add(rt);
+                db2.Reasons.Attach(rt);
+                dt.Reasons.Add(rt);
+                db2.SaveChanges();
+            }
+            Causes.lstCause.Clear();
+            dgv_Causes.DataSource = null;
+            dgv_Causes.Rows.Clear();
 
 
             MessageBox.Show("تفصیلات محفوظ ہو چکی ہیں");
@@ -124,6 +165,8 @@ namespace med_enc
 
         private void MainPage_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'medDbDataSet2.Reason' table. You can move, or remove it, as needed.
+            this.reasonTableAdapter.Fill(this.medDbDataSet2.Reason);
             // TODO: This line of code loads data into the 'medDbDataSet1.Symptoms' table. You can move, or remove it, as needed.
             this.symptomsTableAdapter.Fill(this.medDbDataSet1.Symptoms);
             Diseases d = new Diseases();
@@ -162,6 +205,27 @@ namespace med_enc
                 s.DeleteFromList(rowId);
                 s.ShowInGrid(dgv_symptoms);
             }
+        }
+
+        private void btn_AddCause_Click(object sender, EventArgs e)
+        {
+            Causes c = new Causes();
+            if (c.InvalidName(cmb_CauseName.Text))
+            {
+                lbl_errorCauseName.Text = c.errorCauseName;
+                lbl_errorCauseName.ForeColor = System.Drawing.Color.Red;
+            }
+            else
+            {
+                c.ReasonName = cmb_CauseName.Text;
+                c.addToList();
+                c.ShowInGrid(dgv_Causes);
+            }
+        }
+
+        private void dgv_Causes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
