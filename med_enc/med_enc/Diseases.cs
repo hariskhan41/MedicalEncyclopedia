@@ -34,6 +34,14 @@ namespace med_enc
                     return true;
                 }
             }
+            if (string.IsNullOrEmpty(name))
+            {
+                return true;
+            }
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                return true;
+            }
             return false;
         }
 

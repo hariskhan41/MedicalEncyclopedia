@@ -23,7 +23,7 @@ namespace med_enc
             MedDbEntities db = new MedDbEntities();
             foreach(Reason r in db.Reasons)
             {
-                cmb.Items.Add(cmb);
+                //cmb.Items.Add(cmb);
             }
             cmb.Refresh();
         }
@@ -58,11 +58,23 @@ namespace med_enc
             dgv.DataSource = lstCause;
         }
 
-        public void DeleteFromList(int id)
+        public bool CauseAlreadyInList(string name)
+        {
+            foreach (Causes c in lstCause)
+            {
+                if (c.ReasonName == name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public void DeleteFromList(string name)
         {
             foreach(Causes c in lstCause)
             {
-                if (c.ReasonId == id)
+                if (c.ReasonName == name)
                 {
                     lstCause.Remove(c);
                     break;

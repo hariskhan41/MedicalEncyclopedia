@@ -16,7 +16,7 @@ namespace med_enc
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainPage());
+            Application.Run(new Details());
         }
     }
 }

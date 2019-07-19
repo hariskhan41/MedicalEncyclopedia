@@ -39,6 +39,14 @@ namespace med_enc
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
+            errorFlag = false;
+            lbl_errorCauseName.Text = "";
+            lbl_ErrorEnglishName.Text = "";
+            lbl_ErrorMedicalCureName.Text = "";
+            lbl_ErrorPotency.Text = "";
+            lbl_ErrorSymptom.Text = "";
+            //lbl_ErrorType.Text = "";
+            lbl_ErrorUrduName.Text = "";
             MedDbEntities db = new MedDbEntities();
             Diseases d = new Diseases();
             d.englishName = txt_DiseaseEnglishName.Text;
@@ -69,6 +77,27 @@ namespace med_enc
             {
                 lbl_errorCauseName.Text = "سبب کا ینتخاب کریں";
                 lbl_errorCauseName.ForeColor = System.Drawing.Color.Red;
+                errorFlag = true;
+            }
+            if (Treatment.lstMedicalTreatment.Count == 0)
+            {
+                lbl_ErrorMedicalCureName.Text = "علاج کا انتخاب کریں";
+                lbl_ErrorMedicalCureName.ForeColor = System.Drawing.Color.Red;
+                //lbl_ErrorType.Text = "طرز کا انتخاب کریں";
+                //lbl_ErrorType.ForeColor = System.Drawing.Color.Red;
+                lbl_ErrorPotency.Text = "قوت درج کریں";
+                lbl_ErrorPotency.ForeColor = System.Drawing.Color.Red;
+
+                lbl_ErrorTreatmentNameHomoeo.Text = "علاج کا انتخاب کریں";
+                lbl_ErrorTreatmentNameHomoeo.ForeColor = System.Drawing.Color.Red;
+                lbl_ErrorPotencyHomoeo.Text = "قوت درج کریں";
+                lbl_ErrorPotencyHomoeo.ForeColor = System.Drawing.Color.Red;
+
+                lbl_ErrorTreatmentNameAloe.Text = "علاج کا انتخاب کریں";
+                lbl_ErrorTreatmentNameAloe.ForeColor = System.Drawing.Color.Red;
+                lbl_ErrorPotencyAloe.Text = "قوت درج کریں";
+                lbl_ErrorPotencyAloe.ForeColor = System.Drawing.Color.Red;
+
                 errorFlag = true;
             }
             if (errorFlag == true)
@@ -144,6 +173,63 @@ namespace med_enc
             dgv_Causes.DataSource = null;
             dgv_Causes.Rows.Clear();
 
+            Treatment t = new Treatment();
+            t.AddToDb();
+
+            foreach (Treatment t1 in Treatment.lstMedicalTreatment)
+            {
+                DiseaseMedicine dmTbl = new DiseaseMedicine();
+                dmTbl.DiseaseId = diseaseId;
+                dmTbl.MedicineId = t1.getMedIdFromName(t1.MedName);
+                dmTbl.DoctorRecommendations = txt_DoctorsRecomendation.Text;
+                db.DiseaseMedicines.Add(dmTbl);
+                db.SaveChanges();
+            }
+            Treatment.lstMedicalTreatment.Clear();
+            dgv_MedicalCure.DataSource = null;
+            dgv_MedicalCure.Rows.Clear();
+
+
+            cmb_DiseaseCategory.Items.Clear();
+            d.AddCategoryToCombobox(cmb_DiseaseCategory);
+
+            cmb_Symptom.Items.Clear();
+            s.AddSymptomsToComboBox(cmb_Symptom);
+
+            //cmb_CauseName.Items.Clear();
+            //c.AddCausesToComboBox(cmb_CauseName);
+
+            cmb_MedicalCure.Items.Clear();
+            t.AddTreatmentToCombobox(cmb_MedicalCure);
+            //cmb_Types.Items.Clear();
+            //t.AddTypeToComboBox(cmb_Types);
+            cmb_Potency.Items.Clear();
+            t.AddPotencyToComboBox(cmb_Potency);
+
+            cmb_TreatmentNameHomoeo.Items.Clear();
+            t.AddTreatmentToComboBoxHomoeo(cmb_TreatmentNameHomoeo);
+            cmb_PotencyHomoeo.Items.Clear();
+            t.AddPotencyToComboBoxHomoeo(cmb_PotencyHomoeo);
+
+            cmb_CauseName.Text = "";
+            cmb_DiseaseCategory.Text = "";
+            cmb_MedicalCure.Text = "";
+            cmb_Potency.Text = "";
+            cmb_Symptom.Text = "";
+            //cmb_Types.Text = "";
+            txt_DiseaseDetails.Text = "";
+            txt_DiseaseEnglishName.Text = "";
+            txt_DiseaseUrduName.Text = "";
+            txt_DoctorsRecomendation.Text = "";
+
+            cmb_TreatmentNameHomoeo.Text = "";
+            cmb_PotencyHomoeo.Text = "";
+            txt_DoctorsRecommendationHomoeo.Text = "";
+
+            cmb_TreatmentNameAloe.Text = "";
+            cmb_PotencyAloe.Text = "";
+            txt_DoctorsRecommendationAloe.Text = "";
+
 
             MessageBox.Show("تفصیلات محفوظ ہو چکی ہیں");
             
@@ -165,6 +251,8 @@ namespace med_enc
 
         private void MainPage_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'medDbDataSet3.Medicines' table. You can move, or remove it, as needed.
+            this.medicinesTableAdapter.Fill(this.medDbDataSet3.Medicines);
             // TODO: This line of code loads data into the 'medDbDataSet2.Reason' table. You can move, or remove it, as needed.
             this.reasonTableAdapter.Fill(this.medDbDataSet2.Reason);
             // TODO: This line of code loads data into the 'medDbDataSet1.Symptoms' table. You can move, or remove it, as needed.
@@ -176,6 +264,28 @@ namespace med_enc
             dgv_symptoms.Rows.Clear();
             Symptoms s = new Symptoms();
             s.AddSymptomsToComboBox(cmb_Symptom);
+
+            dgv_Causes.DataSource = null;
+            dgv_Causes.Rows.Clear();
+            //Causes c = new Causes();
+            //c.AddCausesToComboBox(cmb_CauseName);
+
+            dgv_MedicalCure.DataSource = null;
+            dgv_MedicalCure.Rows.Clear();
+            Treatment t = new Treatment();
+            t.AddTreatmentToCombobox(cmb_MedicalCure);
+            //t.AddTypeToComboBox(cmb_Types);
+            t.AddPotencyToComboBox(cmb_Potency);
+
+            dgv_TreatmentHomoeo.DataSource = null;
+            dgv_TreatmentHomoeo.Rows.Clear();
+            t.AddTreatmentToComboBoxHomoeo(cmb_TreatmentNameHomoeo);
+            t.AddPotencyToComboBoxHomoeo(cmb_PotencyHomoeo);
+
+            dgv_TreatmentAloe.DataSource = null;
+            dgv_TreatmentAloe.Rows.Clear();
+            t.AddTreatmentToComboBoxAloe(cmb_TreatmentNameAloe);
+            t.AddPotencyToComboBoxAloe(cmb_PotencyAloe);
         }
 
         private void btn_AddSymptoms_Click(object sender, EventArgs e)
@@ -185,6 +295,11 @@ namespace med_enc
             if (s.InvalidName(cmb_Symptom.Text))
             {
                 lbl_ErrorSymptom.Text = s.errorSymptomName;
+                lbl_ErrorSymptom.ForeColor = System.Drawing.Color.Red;
+            }
+            else if (s.SymptomAlreadyInList(cmb_Symptom.Text))
+            {
+                lbl_ErrorSymptom.Text = "علاج پہلے سے موجود ہے";
                 lbl_ErrorSymptom.ForeColor = System.Drawing.Color.Red;
             }
             else
@@ -201,8 +316,8 @@ namespace med_enc
             if (val == "حزف کریں")
             {
                 Symptoms s = new Symptoms();
-                int rowId = Convert.ToInt32(dgv_symptoms.Rows[e.RowIndex].Cells[0].FormattedValue.ToString());
-                s.DeleteFromList(rowId);
+                string name = dgv_symptoms.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
+                s.DeleteFromList(name);
                 s.ShowInGrid(dgv_symptoms);
             }
         }
@@ -215,6 +330,11 @@ namespace med_enc
                 lbl_errorCauseName.Text = c.errorCauseName;
                 lbl_errorCauseName.ForeColor = System.Drawing.Color.Red;
             }
+            else if (c.CauseAlreadyInList(cmb_CauseName.Text))
+            {
+                lbl_errorCauseName.Text = "سبب پہلے سے موجود ہے";
+                lbl_errorCauseName.ForeColor = System.Drawing.Color.Red;
+            }
             else
             {
                 c.ReasonName = cmb_CauseName.Text;
@@ -225,7 +345,179 @@ namespace med_enc
 
         private void dgv_Causes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            string val = dgv_Causes.Rows[e.RowIndex].Cells[e.ColumnIndex].FormattedValue.ToString();
+            if (val == "حزف کریں")
+            {
+                Causes c = new Causes();
+                string name = dgv_Causes.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
+                c.DeleteFromList(name);
+                c.ShowInGrid(dgv_Causes);
+            }
+        }
 
+        private void body_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void btn_AddMedicalTreatment_Click(object sender, EventArgs e)
+        {
+            bool errFlag = false;
+            Treatment t = new Treatment();
+            if (t.invalidMedName(cmb_MedicalCure.Text))
+            {
+                errFlag = true;
+                lbl_ErrorMedicalCureName.Text = t.errorMedName;
+                lbl_ErrorMedicalCureName.ForeColor = System.Drawing.Color.Red;
+            }
+            
+            if (t.invalidPotency(cmb_Potency.Text))
+            {
+                errFlag = true;
+                lbl_ErrorPotency.Text = t.errorPotency;
+                lbl_ErrorPotency.ForeColor = System.Drawing.Color.Red;
+            }
+            if (errFlag == false && t.treatmentAlreadyInList(cmb_MedicalCure.Text, "طبی", cmb_Potency.Text))
+            {
+                MessageBox.Show("یہ علاج پہلے سے موجود ہے");
+                return;
+            }
+            if (errFlag == true)
+            {
+                return;
+            }
+
+            t.MedName = cmb_MedicalCure.Text;
+            t.Potency = cmb_Potency.Text;
+            t.DoctorRecommendations = txt_DoctorsRecomendation.Text;
+            t.Type = "طبی";
+            t.addToList();
+            
+            t.ShowInGrid(dgv_MedicalCure);
+        }
+
+        private void btn_AddHomoeoTreatment_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_AddTreamentHomoeo_Click(object sender, EventArgs e)
+        {
+            bool errFlag = false;
+            Treatment t = new Treatment();
+            if (t.invalidMedName(cmb_TreatmentNameHomoeo.Text))
+            {
+                errFlag = true;
+                lbl_ErrorTreatmentNameHomoeo.Text = t.errorMedName;
+                lbl_ErrorTreatmentNameHomoeo.ForeColor = System.Drawing.Color.Red;
+            }
+
+            //if (t.invalidPotency(cmb_Potency.Text))
+            //{
+            //    errFlag = true;
+            //    lbl_ErrorPotency.Text = t.errorPotency;
+            //    lbl_ErrorPotency.ForeColor = System.Drawing.Color.Red;
+            //}
+            if (errFlag == false && t.treatmentAlreadyInList(cmb_TreatmentNameHomoeo.Text, "ہومیو", cmb_PotencyHomoeo.Text))
+            {
+                MessageBox.Show("یہ علاج پہلے سے موجود ہے");
+                return;
+            }
+            if (errFlag == true)
+            {
+                return;
+            }
+
+            t.MedName = cmb_TreatmentNameHomoeo.Text;
+            t.Potency = cmb_PotencyHomoeo.Text;
+            t.DoctorRecommendations = txt_DoctorsRecommendationHomoeo.Text;
+            t.Type = "ہومیو";
+            t.addToList();
+
+            t.ShowInGridHomoeo(dgv_TreatmentHomoeo);
+        }
+
+        private void btn_AddTreatmentAloe_Click(object sender, EventArgs e)
+        {
+            bool errFlag = false;
+            Treatment t = new Treatment();
+            if (t.invalidMedName(cmb_TreatmentNameAloe.Text))
+            {
+                errFlag = true;
+                lbl_ErrorTreatmentNameAloe.Text = t.errorMedName;
+                lbl_ErrorTreatmentNameAloe.ForeColor = System.Drawing.Color.Red;
+            }
+
+            //if (t.invalidPotency(cmb_Potency.Text))
+            //{
+            //    errFlag = true;
+            //    lbl_ErrorPotency.Text = t.errorPotency;
+            //    lbl_ErrorPotency.ForeColor = System.Drawing.Color.Red;
+            //}
+            if (errFlag == false && t.treatmentAlreadyInList(cmb_TreatmentNameAloe.Text, "ایلو", cmb_PotencyAloe.Text))
+            {
+                MessageBox.Show("یہ علاج پہلے سے موجود ہے");
+                return;
+            }
+            if (errFlag == true)
+            {
+                return;
+            }
+
+            t.MedName = cmb_TreatmentNameAloe.Text;
+            t.Potency = cmb_PotencyAloe.Text;
+            t.DoctorRecommendations = txt_DoctorsRecommendationAloe.Text;
+            t.Type = "ایلو";
+            t.addToList();
+
+            t.ShowInGridAloe(dgv_TreatmentAloe);
+        }
+
+        private void dgv_MedicalCure_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string val = dgv_MedicalCure.Rows[e.RowIndex].Cells[e.ColumnIndex].FormattedValue.ToString();
+            if (val == "حزف کریں")
+            {
+                Treatment t = new Treatment();
+                string name = dgv_MedicalCure.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
+                t.Delete(name);
+                t.ShowInGrid(dgv_MedicalCure);
+            }
+        }
+
+        private void dgv_TreatmentHomoeo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string val = dgv_TreatmentHomoeo.Rows[e.RowIndex].Cells[e.ColumnIndex].FormattedValue.ToString();
+            if (val == "حزف کریں")
+            {
+                Treatment t = new Treatment();
+                string name = dgv_TreatmentHomoeo.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
+                t.Delete(name);
+                t.ShowInGridHomoeo(dgv_TreatmentHomoeo);
+            }
+        }
+
+        private void dgv_TreatmentAloe_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string val = dgv_TreatmentAloe.Rows[e.RowIndex].Cells[e.ColumnIndex].FormattedValue.ToString();
+            if (val == "حزف کریں")
+            {
+                Treatment t = new Treatment();
+                string name = dgv_TreatmentAloe.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
+                t.Delete(name);
+                t.ShowInGridAloe(dgv_TreatmentAloe);
+            }
+        }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_Reset_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

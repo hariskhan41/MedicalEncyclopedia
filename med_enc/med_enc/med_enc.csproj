@@ -84,9 +84,16 @@
       <DependentUpon>MedDbEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="Causes.cs" />
+    <Compile Include="Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Details.Designer.cs">
+      <DependentUpon>Details.cs</DependentUpon>
+    </Compile>
     <Compile Include="Disease.cs">
       <DependentUpon>MedDbEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="DiseaseDetails.cs" />
     <Compile Include="DiseaseMedicine.cs">
       <DependentUpon>MedDbEntities.tt</DependentUpon>
     </Compile>
@@ -111,6 +118,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MedDbDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedDbDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedDbDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MedDbDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MedDbDataSet4.xsd</DependentUpon>
     </Compile>
     <Compile Include="MedDbEntities.Context.cs">
       <AutoGen>True</AutoGen>
@@ -142,8 +159,12 @@
     <Compile Include="sysdiagram.cs">
       <DependentUpon>MedDbEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Treatment.cs" />
     <EmbeddedResource Include="Categories.resx">
       <DependentUpon>Categories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Details.resx">
+      <DependentUpon>Details.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -194,6 +215,28 @@
     </None>
     <None Include="MedDbDataSet2.xss">
       <DependentUpon>MedDbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MedDbDataSet3.xsc">
+      <DependentUpon>MedDbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MedDbDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedDbDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedDbDataSet3.xss">
+      <DependentUpon>MedDbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MedDbDataSet4.xsc">
+      <DependentUpon>MedDbDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="MedDbDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MedDbDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MedDbDataSet4.xss">
+      <DependentUpon>MedDbDataSet4.xsd</DependentUpon>
     </None>
     <None Include="MedDbEntities.edmx.diagram">
       <DependentUpon>MedDbEntities.edmx</DependentUpon>

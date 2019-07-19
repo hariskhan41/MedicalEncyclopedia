@@ -68,6 +68,18 @@ namespace med_enc
             lstSym.Add(s);
         }
 
+        public bool SymptomAlreadyInList(string name)
+        {
+            foreach (Symptoms s in lstSym)
+            {
+                if (s.SymptomName == name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public void ShowInGrid(DataGridView dgv)
         {
             dgv.DataSource = null;
@@ -75,11 +87,11 @@ namespace med_enc
             dgv.DataSource = lstSym;
         }
 
-        public void DeleteFromList(int id)
+        public void DeleteFromList(string name)
         {
             foreach (Symptoms s in lstSym)
             {
-                if (s.Id == id)
+                if (s.SymptomName == name)
                 {
                     lstSym.Remove(s);
                     break;

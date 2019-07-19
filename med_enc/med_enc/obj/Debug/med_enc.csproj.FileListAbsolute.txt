@@ -80,3 +80,4 @@ C:\Users\haris\Desktop\medicalencyclopedia\med_enc\med_enc\obj\Debug\med_enc.Cat
 C:\Users\haris\Desktop\medicalencyclopedia\med_enc\med_enc\obj\Debug\med_enc.MainPage.resources
 C:\Users\haris\Desktop\medicalencyclopedia\med_enc\med_enc\obj\Debug\med_enc.Properties.Resources.resources
 C:\Users\haris\Desktop\medicalencyclopedia\med_enc\med_enc\obj\Debug\med_enc.csproj.GenerateResource.Cache
+C:\Users\haris\Desktop\medicalencyclopedia\med_enc\med_enc\obj\Debug\med_enc.Details.resources
