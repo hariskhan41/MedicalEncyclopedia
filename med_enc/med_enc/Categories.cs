@@ -54,7 +54,8 @@ namespace med_enc
             string s = dgv_CategoryDetails.Rows[e.RowIndex].Cells[e.ColumnIndex].FormattedValue.ToString();
             if (s == "ترمیم")
             {
-                txt_CategoryName.Text = dgv_CategoryDetails.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
+                CatagoryDetails.temp = dgv_CategoryDetails.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
+                txt_CategoryName.Text = CatagoryDetails.temp;
                 txt_CategoryDetails.Text = dgv_CategoryDetails.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
                 cmb_CategoryHeadName.Text = dgv_CategoryDetails.Rows[e.RowIndex].Cells[3].FormattedValue.ToString();
                 categoryId = Convert.ToInt32(dgv_CategoryDetails.Rows[e.RowIndex].Cells[6].FormattedValue);

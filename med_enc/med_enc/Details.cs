@@ -26,15 +26,15 @@ namespace med_enc
             DiseaseDetails d = new DiseaseDetails();
             MedDbEntities db = new MedDbEntities();
             //d.ShowInGrid(dgv_Details);
-            dgv_Details.DataSource = db.Diseases.ToList();
-            int rows = dgv_Details.Rows.Count;
-            for (int i = 0; i < rows; i++)
-            {
-                if (dgv_Details.Rows[i].Cells[6].FormattedValue.ToString() != "")
-                {
-                    dgv_Details.Rows[i].Cells[7].Value = d.getCategoryNameFromCategoryId(Convert.ToInt32(dgv_Details.Rows[i].Cells[6].FormattedValue.ToString()));
-                }
-            }
+            //dgv_Details.DataSource = db.Diseases.ToList();
+            //int rows = dgv_Details.Rows.Count;
+            //for (int i = 0; i < rows; i++)
+            //{
+            //    if (dgv_Details.Rows[i].Cells[6].FormattedValue.ToString() != "")
+            //    {
+            //        dgv_Details.Rows[i].Cells[7].Value = d.getCategoryNameFromCategoryId(Convert.ToInt32(dgv_Details.Rows[i].Cells[6].FormattedValue.ToString()));
+            //    }
+            //}
         }
 
         private void نیکیٹیگریToolStripMenuItem_Click(object sender, EventArgs e)

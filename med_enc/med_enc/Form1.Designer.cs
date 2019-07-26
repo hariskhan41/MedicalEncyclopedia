@@ -29,13 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.TaskbarPanel = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.فائلToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.انتظامیامورToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.بیماریوںکیتفصیلاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.رپورٹسToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.EmptyPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -62,6 +55,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btn_AddSymptoms = new System.Windows.Forms.Button();
             this.dgv_symptoms = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.symptomNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.symptomsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.medDbDataSet1 = new med_enc.MedDbDataSet1();
             this.label14 = new System.Windows.Forms.Label();
@@ -73,6 +69,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btn_AddCause = new System.Windows.Forms.Button();
             this.dgv_Causes = new System.Windows.Forms.DataGridView();
+            this.reasonIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.reasonNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeleteReason = new System.Windows.Forms.DataGridViewButtonColumn();
             this.reasonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.medDbDataSet2 = new med_enc.MedDbDataSet2();
             this.lbl_errorCauseName = new System.Windows.Forms.Label();
@@ -89,6 +88,11 @@
             this.label11 = new System.Windows.Forms.Label();
             this.btn_AddMedicalTreatment = new System.Windows.Forms.Button();
             this.dgv_MedicalCure = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.potencyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeleteMedName1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.medicinesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.medDbDataSet3 = new med_enc.MedDbDataSet3();
             this.label19 = new System.Windows.Forms.Label();
@@ -104,6 +108,11 @@
             this.label20 = new System.Windows.Forms.Label();
             this.btn_AddTreamentHomoeo = new System.Windows.Forms.Button();
             this.dgv_TreatmentHomoeo = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label21 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
@@ -117,6 +126,11 @@
             this.label24 = new System.Windows.Forms.Label();
             this.btn_AddTreatmentAloe = new System.Windows.Forms.Button();
             this.dgv_TreatmentAloe = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label25 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.button13 = new System.Windows.Forms.Button();
@@ -129,29 +143,6 @@
             this.symptomsTableAdapter = new med_enc.MedDbDataSet1TableAdapters.SymptomsTableAdapter();
             this.reasonTableAdapter = new med_enc.MedDbDataSet2TableAdapters.ReasonTableAdapter();
             this.medicinesTableAdapter = new med_enc.MedDbDataSet3TableAdapters.MedicinesTableAdapter();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.symptomNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.reasonIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.reasonNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeleteReason = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.potencyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeleteMedName1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.TaskbarPanel.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel15.SuspendLayout();
@@ -185,73 +176,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             this.SuspendLayout();
             // 
-            // TaskbarPanel
-            // 
-            this.TaskbarPanel.Controls.Add(this.menuStrip1);
-            this.TaskbarPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TaskbarPanel.Location = new System.Drawing.Point(0, 0);
-            this.TaskbarPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.TaskbarPanel.Name = "TaskbarPanel";
-            this.TaskbarPanel.Size = new System.Drawing.Size(878, 40);
-            this.TaskbarPanel.TabIndex = 0;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Font = new System.Drawing.Font("Jameel Noori Nastaleeq", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.فائلToolStripMenuItem,
-            this.انتظامیامورToolStripMenuItem,
-            this.بیماریوںکیتفصیلاتToolStripMenuItem,
-            this.رپورٹسToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuStrip1.Size = new System.Drawing.Size(878, 30);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "MenuBar";
-            // 
-            // فائلToolStripMenuItem
-            // 
-            this.فائلToolStripMenuItem.Name = "فائلToolStripMenuItem";
-            this.فائلToolStripMenuItem.Size = new System.Drawing.Size(38, 26);
-            this.فائلToolStripMenuItem.Text = "فائل";
-            // 
-            // انتظامیامورToolStripMenuItem
-            // 
-            this.انتظامیامورToolStripMenuItem.Name = "انتظامیامورToolStripMenuItem";
-            this.انتظامیامورToolStripMenuItem.Size = new System.Drawing.Size(56, 26);
-            this.انتظامیامورToolStripMenuItem.Text = "انتظامی امور";
-            // 
-            // بیماریوںکیتفصیلاتToolStripMenuItem
-            // 
-            this.بیماریوںکیتفصیلاتToolStripMenuItem.Name = "بیماریوںکیتفصیلاتToolStripMenuItem";
-            this.بیماریوںکیتفصیلاتToolStripMenuItem.Size = new System.Drawing.Size(80, 26);
-            this.بیماریوںکیتفصیلاتToolStripMenuItem.Text = "بیماریوں کی تفصیلات";
-            // 
-            // رپورٹسToolStripMenuItem
-            // 
-            this.رپورٹسToolStripMenuItem.Name = "رپورٹسToolStripMenuItem";
-            this.رپورٹسToolStripMenuItem.Size = new System.Drawing.Size(48, 26);
-            this.رپورٹسToolStripMenuItem.Text = "رپورٹس";
-            // 
-            // EmptyPanel
-            // 
-            this.EmptyPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.EmptyPanel.Location = new System.Drawing.Point(811, 40);
-            this.EmptyPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.EmptyPanel.Name = "EmptyPanel";
-            this.EmptyPanel.Size = new System.Drawing.Size(67, 601);
-            this.EmptyPanel.TabIndex = 2;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.body);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 40);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(811, 601);
+            this.panel1.Size = new System.Drawing.Size(878, 641);
             this.panel1.TabIndex = 3;
             // 
             // panel2
@@ -260,10 +193,10 @@
             this.panel2.Controls.Add(this.panel14);
             this.panel2.Controls.Add(this.panel13);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 556);
+            this.panel2.Location = new System.Drawing.Point(0, 596);
             this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(811, 45);
+            this.panel2.Size = new System.Drawing.Size(878, 45);
             this.panel2.TabIndex = 1;
             // 
             // panel15
@@ -345,7 +278,7 @@
             this.body.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.body.RightToLeftLayout = true;
             this.body.SelectedIndex = 0;
-            this.body.Size = new System.Drawing.Size(811, 601);
+            this.body.Size = new System.Drawing.Size(878, 641);
             this.body.TabIndex = 0;
             this.body.SelectedIndexChanged += new System.EventHandler(this.body_SelectedIndexChanged);
             // 
@@ -356,7 +289,7 @@
             this.Gen_info.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Gen_info.Name = "Gen_info";
             this.Gen_info.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.Gen_info.Size = new System.Drawing.Size(803, 561);
+            this.Gen_info.Size = new System.Drawing.Size(870, 601);
             this.Gen_info.TabIndex = 0;
             this.Gen_info.Text = "عام معلومات";
             this.Gen_info.UseVisualStyleBackColor = true;
@@ -387,7 +320,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 270F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(799, 555);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(866, 595);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label18
@@ -395,7 +328,7 @@
             this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Jameel Noori Nastaleeq", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(662, 8);
+            this.label18.Location = new System.Drawing.Point(729, 8);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(135, 27);
@@ -405,22 +338,22 @@
             // txt_DiseaseUrduName
             // 
             this.txt_DiseaseUrduName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_DiseaseUrduName.Location = new System.Drawing.Point(0, 3);
+            this.txt_DiseaseUrduName.Location = new System.Drawing.Point(2, 3);
             this.txt_DiseaseUrduName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_DiseaseUrduName.Multiline = true;
             this.txt_DiseaseUrduName.Name = "txt_DiseaseUrduName";
-            this.txt_DiseaseUrduName.Size = new System.Drawing.Size(658, 38);
+            this.txt_DiseaseUrduName.Size = new System.Drawing.Size(723, 38);
             this.txt_DiseaseUrduName.TabIndex = 14;
             // 
             // txt_DiseaseEnglishName
             // 
             this.txt_DiseaseEnglishName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_DiseaseEnglishName.Location = new System.Drawing.Point(0, 71);
+            this.txt_DiseaseEnglishName.Location = new System.Drawing.Point(2, 71);
             this.txt_DiseaseEnglishName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_DiseaseEnglishName.Multiline = true;
             this.txt_DiseaseEnglishName.Name = "txt_DiseaseEnglishName";
             this.txt_DiseaseEnglishName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txt_DiseaseEnglishName.Size = new System.Drawing.Size(658, 41);
+            this.txt_DiseaseEnglishName.Size = new System.Drawing.Size(723, 41);
             this.txt_DiseaseEnglishName.TabIndex = 15;
             // 
             // label17
@@ -428,7 +361,7 @@
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Jameel Noori Nastaleeq", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(662, 78);
+            this.label17.Location = new System.Drawing.Point(729, 78);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(135, 27);
@@ -438,17 +371,17 @@
             // txt_DiseaseDetails
             // 
             this.txt_DiseaseDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_DiseaseDetails.Location = new System.Drawing.Point(0, 184);
+            this.txt_DiseaseDetails.Location = new System.Drawing.Point(2, 184);
             this.txt_DiseaseDetails.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_DiseaseDetails.Multiline = true;
             this.txt_DiseaseDetails.Name = "txt_DiseaseDetails";
-            this.txt_DiseaseDetails.Size = new System.Drawing.Size(658, 368);
+            this.txt_DiseaseDetails.Size = new System.Drawing.Size(723, 408);
             this.txt_DiseaseDetails.TabIndex = 17;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(720, 181);
+            this.label15.Location = new System.Drawing.Point(787, 181);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(77, 27);
@@ -460,7 +393,7 @@
             this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Jameel Noori Nastaleeq", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(662, 148);
+            this.label16.Location = new System.Drawing.Point(729, 148);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(135, 27);
@@ -472,10 +405,10 @@
             this.cmb_DiseaseCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmb_DiseaseCategory.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmb_DiseaseCategory.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmb_DiseaseCategory.Location = new System.Drawing.Point(0, 145);
+            this.cmb_DiseaseCategory.Location = new System.Drawing.Point(2, 151);
             this.cmb_DiseaseCategory.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmb_DiseaseCategory.Name = "cmb_DiseaseCategory";
-            this.cmb_DiseaseCategory.Size = new System.Drawing.Size(658, 35);
+            this.cmb_DiseaseCategory.Size = new System.Drawing.Size(723, 35);
             this.cmb_DiseaseCategory.TabIndex = 0;
             // 
             // lbl_ErrorUrduName
@@ -483,10 +416,10 @@
             this.lbl_ErrorUrduName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ErrorUrduName.AutoSize = true;
             this.lbl_ErrorUrduName.Font = new System.Drawing.Font("Jameel Noori Nastaleeq", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ErrorUrduName.Location = new System.Drawing.Point(0, 45);
+            this.lbl_ErrorUrduName.Location = new System.Drawing.Point(2, 45);
             this.lbl_ErrorUrduName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ErrorUrduName.Name = "lbl_ErrorUrduName";
-            this.lbl_ErrorUrduName.Size = new System.Drawing.Size(658, 22);
+            this.lbl_ErrorUrduName.Size = new System.Drawing.Size(723, 22);
             this.lbl_ErrorUrduName.TabIndex = 18;
             // 
             // lbl_ErrorEnglishName
@@ -494,10 +427,10 @@
             this.lbl_ErrorEnglishName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ErrorEnglishName.AutoSize = true;
             this.lbl_ErrorEnglishName.Font = new System.Drawing.Font("Jameel Noori Nastaleeq", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ErrorEnglishName.Location = new System.Drawing.Point(0, 117);
+            this.lbl_ErrorEnglishName.Location = new System.Drawing.Point(2, 117);
             this.lbl_ErrorEnglishName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ErrorEnglishName.Name = "lbl_ErrorEnglishName";
-            this.lbl_ErrorEnglishName.Size = new System.Drawing.Size(658, 22);
+            this.lbl_ErrorEnglishName.Size = new System.Drawing.Size(723, 22);
             this.lbl_ErrorEnglishName.TabIndex = 19;
             // 
             // tabPage2
@@ -507,7 +440,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage2.Size = new System.Drawing.Size(803, 561);
+            this.tabPage2.Size = new System.Drawing.Size(870, 601);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "علامات";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -532,14 +465,14 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 326F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(799, 555);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(866, 595);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(662, 6);
+            this.label5.Location = new System.Drawing.Point(729, 6);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(135, 27);
@@ -548,7 +481,7 @@
             // 
             // btn_AddSymptoms
             // 
-            this.btn_AddSymptoms.Location = new System.Drawing.Point(516, 66);
+            this.btn_AddSymptoms.Location = new System.Drawing.Point(583, 66);
             this.btn_AddSymptoms.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_AddSymptoms.Name = "btn_AddSymptoms";
             this.btn_AddSymptoms.Size = new System.Drawing.Size(142, 35);
@@ -569,12 +502,33 @@
             this.Delete});
             this.dgv_symptoms.DataSource = this.symptomsBindingSource;
             this.dgv_symptoms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_symptoms.Location = new System.Drawing.Point(0, 107);
+            this.dgv_symptoms.Location = new System.Drawing.Point(2, 107);
             this.dgv_symptoms.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgv_symptoms.Name = "dgv_symptoms";
-            this.dgv_symptoms.Size = new System.Drawing.Size(658, 445);
+            this.dgv_symptoms.Size = new System.Drawing.Size(723, 485);
             this.dgv_symptoms.TabIndex = 15;
             this.dgv_symptoms.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_symptoms_CellContentClick);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // symptomNameDataGridViewTextBoxColumn
+            // 
+            this.symptomNameDataGridViewTextBoxColumn.DataPropertyName = "SymptomName";
+            this.symptomNameDataGridViewTextBoxColumn.HeaderText = "نام";
+            this.symptomNameDataGridViewTextBoxColumn.Name = "symptomNameDataGridViewTextBoxColumn";
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "حزف کریں";
+            this.Delete.Name = "Delete";
+            this.Delete.Text = "حزف کریں";
+            this.Delete.UseColumnTextForButtonValue = true;
             // 
             // symptomsBindingSource
             // 
@@ -589,7 +543,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(684, 104);
+            this.label14.Location = new System.Drawing.Point(751, 104);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(113, 27);
@@ -601,10 +555,10 @@
             this.lbl_ErrorSymptom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ErrorSymptom.AutoSize = true;
             this.lbl_ErrorSymptom.Font = new System.Drawing.Font("Jameel Noori Nastaleeq", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ErrorSymptom.Location = new System.Drawing.Point(0, 40);
+            this.lbl_ErrorSymptom.Location = new System.Drawing.Point(2, 40);
             this.lbl_ErrorSymptom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ErrorSymptom.Name = "lbl_ErrorSymptom";
-            this.lbl_ErrorSymptom.Size = new System.Drawing.Size(658, 22);
+            this.lbl_ErrorSymptom.Size = new System.Drawing.Size(723, 22);
             this.lbl_ErrorSymptom.TabIndex = 16;
             // 
             // cmb_Symptom
@@ -613,10 +567,10 @@
             this.cmb_Symptom.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmb_Symptom.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmb_Symptom.FormattingEnabled = true;
-            this.cmb_Symptom.Location = new System.Drawing.Point(0, 3);
+            this.cmb_Symptom.Location = new System.Drawing.Point(2, 9);
             this.cmb_Symptom.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmb_Symptom.Name = "cmb_Symptom";
-            this.cmb_Symptom.Size = new System.Drawing.Size(658, 35);
+            this.cmb_Symptom.Size = new System.Drawing.Size(723, 35);
             this.cmb_Symptom.TabIndex = 19;
             // 
             // tabPage1
@@ -626,7 +580,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage1.Size = new System.Drawing.Size(803, 561);
+            this.tabPage1.Size = new System.Drawing.Size(870, 601);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "اسباب";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -651,14 +605,14 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 328F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(799, 555);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(866, 595);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // label8
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(662, 6);
+            this.label8.Location = new System.Drawing.Point(729, 6);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(135, 27);
@@ -668,7 +622,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(675, 106);
+            this.label2.Location = new System.Drawing.Point(742, 106);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 27);
@@ -678,7 +632,7 @@
             // 
             // btn_AddCause
             // 
-            this.btn_AddCause.Location = new System.Drawing.Point(516, 68);
+            this.btn_AddCause.Location = new System.Drawing.Point(583, 68);
             this.btn_AddCause.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_AddCause.Name = "btn_AddCause";
             this.btn_AddCause.Size = new System.Drawing.Size(142, 35);
@@ -699,12 +653,35 @@
             this.DeleteReason});
             this.dgv_Causes.DataSource = this.reasonBindingSource;
             this.dgv_Causes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Causes.Location = new System.Drawing.Point(0, 109);
+            this.dgv_Causes.Location = new System.Drawing.Point(2, 109);
             this.dgv_Causes.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgv_Causes.Name = "dgv_Causes";
-            this.dgv_Causes.Size = new System.Drawing.Size(658, 443);
+            this.dgv_Causes.Size = new System.Drawing.Size(723, 483);
             this.dgv_Causes.TabIndex = 15;
             this.dgv_Causes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Causes_CellContentClick);
+            // 
+            // reasonIdDataGridViewTextBoxColumn
+            // 
+            this.reasonIdDataGridViewTextBoxColumn.DataPropertyName = "ReasonId";
+            this.reasonIdDataGridViewTextBoxColumn.HeaderText = "ReasonId";
+            this.reasonIdDataGridViewTextBoxColumn.Name = "reasonIdDataGridViewTextBoxColumn";
+            this.reasonIdDataGridViewTextBoxColumn.ReadOnly = true;
+            this.reasonIdDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // reasonNameDataGridViewTextBoxColumn
+            // 
+            this.reasonNameDataGridViewTextBoxColumn.DataPropertyName = "ReasonName";
+            this.reasonNameDataGridViewTextBoxColumn.HeaderText = "سبب";
+            this.reasonNameDataGridViewTextBoxColumn.Name = "reasonNameDataGridViewTextBoxColumn";
+            // 
+            // DeleteReason
+            // 
+            this.DeleteReason.DataPropertyName = "ReasonId";
+            this.DeleteReason.HeaderText = "حزف کریں";
+            this.DeleteReason.Name = "DeleteReason";
+            this.DeleteReason.ReadOnly = true;
+            this.DeleteReason.Text = "حزف کریں";
+            this.DeleteReason.UseColumnTextForButtonValue = true;
             // 
             // reasonBindingSource
             // 
@@ -721,10 +698,10 @@
             this.lbl_errorCauseName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_errorCauseName.AutoSize = true;
             this.lbl_errorCauseName.Font = new System.Drawing.Font("Jameel Noori Nastaleeq", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_errorCauseName.Location = new System.Drawing.Point(0, 41);
+            this.lbl_errorCauseName.Location = new System.Drawing.Point(2, 41);
             this.lbl_errorCauseName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_errorCauseName.Name = "lbl_errorCauseName";
-            this.lbl_errorCauseName.Size = new System.Drawing.Size(658, 22);
+            this.lbl_errorCauseName.Size = new System.Drawing.Size(723, 22);
             this.lbl_errorCauseName.TabIndex = 20;
             // 
             // cmb_CauseName
@@ -734,10 +711,10 @@
             this.cmb_CauseName.DataSource = this.reasonBindingSource;
             this.cmb_CauseName.DisplayMember = "ReasonName";
             this.cmb_CauseName.FormattingEnabled = true;
-            this.cmb_CauseName.Location = new System.Drawing.Point(0, 3);
+            this.cmb_CauseName.Location = new System.Drawing.Point(2, 9);
             this.cmb_CauseName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmb_CauseName.Name = "cmb_CauseName";
-            this.cmb_CauseName.Size = new System.Drawing.Size(658, 35);
+            this.cmb_CauseName.Size = new System.Drawing.Size(723, 35);
             this.cmb_CauseName.TabIndex = 21;
             this.cmb_CauseName.ValueMember = "ReasonName";
             // 
@@ -748,7 +725,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage3.Size = new System.Drawing.Size(803, 561);
+            this.tabPage3.Size = new System.Drawing.Size(870, 601);
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "طبی علاج";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -781,14 +758,14 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(799, 555);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(866, 595);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(662, 6);
+            this.label3.Location = new System.Drawing.Point(729, 6);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(135, 27);
@@ -801,10 +778,10 @@
             this.cmb_MedicalCure.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmb_MedicalCure.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmb_MedicalCure.FormattingEnabled = true;
-            this.cmb_MedicalCure.Location = new System.Drawing.Point(0, 3);
+            this.cmb_MedicalCure.Location = new System.Drawing.Point(2, 9);
             this.cmb_MedicalCure.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmb_MedicalCure.Name = "cmb_MedicalCure";
-            this.cmb_MedicalCure.Size = new System.Drawing.Size(658, 35);
+            this.cmb_MedicalCure.Size = new System.Drawing.Size(723, 35);
             this.cmb_MedicalCure.TabIndex = 23;
             // 
             // lbl_ErrorMedicalCureName
@@ -812,10 +789,10 @@
             this.lbl_ErrorMedicalCureName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ErrorMedicalCureName.AutoSize = true;
             this.lbl_ErrorMedicalCureName.Font = new System.Drawing.Font("Jameel Noori Nastaleeq", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ErrorMedicalCureName.Location = new System.Drawing.Point(0, 41);
+            this.lbl_ErrorMedicalCureName.Location = new System.Drawing.Point(2, 41);
             this.lbl_ErrorMedicalCureName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ErrorMedicalCureName.Name = "lbl_ErrorMedicalCureName";
-            this.lbl_ErrorMedicalCureName.Size = new System.Drawing.Size(658, 22);
+            this.lbl_ErrorMedicalCureName.Size = new System.Drawing.Size(723, 22);
             this.lbl_ErrorMedicalCureName.TabIndex = 25;
             // 
             // cmb_Potency
@@ -824,17 +801,17 @@
             this.cmb_Potency.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmb_Potency.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmb_Potency.FormattingEnabled = true;
-            this.cmb_Potency.Location = new System.Drawing.Point(0, 68);
+            this.cmb_Potency.Location = new System.Drawing.Point(2, 75);
             this.cmb_Potency.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmb_Potency.Name = "cmb_Potency";
-            this.cmb_Potency.Size = new System.Drawing.Size(658, 35);
+            this.cmb_Potency.Size = new System.Drawing.Size(723, 35);
             this.cmb_Potency.TabIndex = 37;
             // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(662, 72);
+            this.label6.Location = new System.Drawing.Point(729, 72);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(135, 27);
@@ -846,28 +823,28 @@
             this.lbl_ErrorPotency.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ErrorPotency.AutoSize = true;
             this.lbl_ErrorPotency.Font = new System.Drawing.Font("Jameel Noori Nastaleeq", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ErrorPotency.Location = new System.Drawing.Point(0, 108);
+            this.lbl_ErrorPotency.Location = new System.Drawing.Point(2, 108);
             this.lbl_ErrorPotency.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ErrorPotency.Name = "lbl_ErrorPotency";
-            this.lbl_ErrorPotency.Size = new System.Drawing.Size(658, 22);
+            this.lbl_ErrorPotency.Size = new System.Drawing.Size(723, 22);
             this.lbl_ErrorPotency.TabIndex = 32;
             // 
             // txt_DoctorsRecomendation
             // 
             this.txt_DoctorsRecomendation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_DoctorsRecomendation.Location = new System.Drawing.Point(0, 134);
+            this.txt_DoctorsRecomendation.Location = new System.Drawing.Point(2, 134);
             this.txt_DoctorsRecomendation.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_DoctorsRecomendation.Multiline = true;
             this.txt_DoctorsRecomendation.Name = "txt_DoctorsRecomendation";
             this.txt_DoctorsRecomendation.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_DoctorsRecomendation.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txt_DoctorsRecomendation.Size = new System.Drawing.Size(658, 60);
+            this.txt_DoctorsRecomendation.Size = new System.Drawing.Size(723, 60);
             this.txt_DoctorsRecomendation.TabIndex = 33;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(722, 131);
+            this.label11.Location = new System.Drawing.Point(789, 131);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(75, 27);
@@ -876,7 +853,7 @@
             // 
             // btn_AddMedicalTreatment
             // 
-            this.btn_AddMedicalTreatment.Location = new System.Drawing.Point(516, 200);
+            this.btn_AddMedicalTreatment.Location = new System.Drawing.Point(583, 200);
             this.btn_AddMedicalTreatment.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_AddMedicalTreatment.Name = "btn_AddMedicalTreatment";
             this.btn_AddMedicalTreatment.Size = new System.Drawing.Size(142, 33);
@@ -899,12 +876,45 @@
             this.DeleteMedName1});
             this.dgv_MedicalCure.DataSource = this.medicinesBindingSource;
             this.dgv_MedicalCure.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_MedicalCure.Location = new System.Drawing.Point(0, 239);
+            this.dgv_MedicalCure.Location = new System.Drawing.Point(2, 239);
             this.dgv_MedicalCure.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgv_MedicalCure.Name = "dgv_MedicalCure";
-            this.dgv_MedicalCure.Size = new System.Drawing.Size(658, 313);
+            this.dgv_MedicalCure.Size = new System.Drawing.Size(723, 353);
             this.dgv_MedicalCure.TabIndex = 34;
             this.dgv_MedicalCure.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_MedicalCure_CellContentClick);
+            // 
+            // idDataGridViewTextBoxColumn1
+            // 
+            this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // medNameDataGridViewTextBoxColumn
+            // 
+            this.medNameDataGridViewTextBoxColumn.DataPropertyName = "MedName";
+            this.medNameDataGridViewTextBoxColumn.HeaderText = "علاج";
+            this.medNameDataGridViewTextBoxColumn.Name = "medNameDataGridViewTextBoxColumn";
+            // 
+            // typeDataGridViewTextBoxColumn
+            // 
+            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
+            this.typeDataGridViewTextBoxColumn.HeaderText = "طرز";
+            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            // 
+            // potencyDataGridViewTextBoxColumn
+            // 
+            this.potencyDataGridViewTextBoxColumn.DataPropertyName = "Potency";
+            this.potencyDataGridViewTextBoxColumn.HeaderText = "قوت";
+            this.potencyDataGridViewTextBoxColumn.Name = "potencyDataGridViewTextBoxColumn";
+            // 
+            // DeleteMedName1
+            // 
+            this.DeleteMedName1.HeaderText = "حزف کریں";
+            this.DeleteMedName1.Name = "DeleteMedName1";
+            this.DeleteMedName1.Text = "حزف کریں";
+            this.DeleteMedName1.UseColumnTextForButtonValue = true;
             // 
             // medicinesBindingSource
             // 
@@ -920,7 +930,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Location = new System.Drawing.Point(674, 236);
+            this.label19.Location = new System.Drawing.Point(741, 236);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(123, 27);
@@ -934,7 +944,7 @@
             this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage4.Size = new System.Drawing.Size(803, 561);
+            this.tabPage4.Size = new System.Drawing.Size(870, 601);
             this.tabPage4.TabIndex = 4;
             this.tabPage4.Text = "ہومیو علاج";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -967,14 +977,14 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(799, 555);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(866, 595);
             this.tableLayoutPanel5.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(662, 6);
+            this.label1.Location = new System.Drawing.Point(729, 6);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(135, 27);
@@ -987,10 +997,10 @@
             this.cmb_TreatmentNameHomoeo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmb_TreatmentNameHomoeo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmb_TreatmentNameHomoeo.FormattingEnabled = true;
-            this.cmb_TreatmentNameHomoeo.Location = new System.Drawing.Point(0, 3);
+            this.cmb_TreatmentNameHomoeo.Location = new System.Drawing.Point(2, 9);
             this.cmb_TreatmentNameHomoeo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmb_TreatmentNameHomoeo.Name = "cmb_TreatmentNameHomoeo";
-            this.cmb_TreatmentNameHomoeo.Size = new System.Drawing.Size(658, 35);
+            this.cmb_TreatmentNameHomoeo.Size = new System.Drawing.Size(723, 35);
             this.cmb_TreatmentNameHomoeo.TabIndex = 23;
             // 
             // lbl_ErrorTreatmentNameHomoeo
@@ -998,10 +1008,10 @@
             this.lbl_ErrorTreatmentNameHomoeo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ErrorTreatmentNameHomoeo.AutoSize = true;
             this.lbl_ErrorTreatmentNameHomoeo.Font = new System.Drawing.Font("Jameel Noori Nastaleeq", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ErrorTreatmentNameHomoeo.Location = new System.Drawing.Point(0, 41);
+            this.lbl_ErrorTreatmentNameHomoeo.Location = new System.Drawing.Point(2, 41);
             this.lbl_ErrorTreatmentNameHomoeo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ErrorTreatmentNameHomoeo.Name = "lbl_ErrorTreatmentNameHomoeo";
-            this.lbl_ErrorTreatmentNameHomoeo.Size = new System.Drawing.Size(658, 22);
+            this.lbl_ErrorTreatmentNameHomoeo.Size = new System.Drawing.Size(723, 22);
             this.lbl_ErrorTreatmentNameHomoeo.TabIndex = 25;
             // 
             // cmb_PotencyHomoeo
@@ -1010,17 +1020,17 @@
             this.cmb_PotencyHomoeo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmb_PotencyHomoeo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmb_PotencyHomoeo.FormattingEnabled = true;
-            this.cmb_PotencyHomoeo.Location = new System.Drawing.Point(0, 68);
+            this.cmb_PotencyHomoeo.Location = new System.Drawing.Point(2, 74);
             this.cmb_PotencyHomoeo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmb_PotencyHomoeo.Name = "cmb_PotencyHomoeo";
-            this.cmb_PotencyHomoeo.Size = new System.Drawing.Size(658, 35);
+            this.cmb_PotencyHomoeo.Size = new System.Drawing.Size(723, 35);
             this.cmb_PotencyHomoeo.TabIndex = 37;
             // 
             // label7
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(662, 71);
+            this.label7.Location = new System.Drawing.Point(729, 71);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(135, 27);
@@ -1032,28 +1042,28 @@
             this.lbl_ErrorPotencyHomoeo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ErrorPotencyHomoeo.AutoSize = true;
             this.lbl_ErrorPotencyHomoeo.Font = new System.Drawing.Font("Jameel Noori Nastaleeq", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ErrorPotencyHomoeo.Location = new System.Drawing.Point(0, 105);
+            this.lbl_ErrorPotencyHomoeo.Location = new System.Drawing.Point(2, 105);
             this.lbl_ErrorPotencyHomoeo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ErrorPotencyHomoeo.Name = "lbl_ErrorPotencyHomoeo";
-            this.lbl_ErrorPotencyHomoeo.Size = new System.Drawing.Size(658, 22);
+            this.lbl_ErrorPotencyHomoeo.Size = new System.Drawing.Size(723, 22);
             this.lbl_ErrorPotencyHomoeo.TabIndex = 32;
             // 
             // txt_DoctorsRecommendationHomoeo
             // 
             this.txt_DoctorsRecommendationHomoeo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_DoctorsRecommendationHomoeo.Location = new System.Drawing.Point(0, 132);
+            this.txt_DoctorsRecommendationHomoeo.Location = new System.Drawing.Point(2, 132);
             this.txt_DoctorsRecommendationHomoeo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_DoctorsRecommendationHomoeo.Multiline = true;
             this.txt_DoctorsRecommendationHomoeo.Name = "txt_DoctorsRecommendationHomoeo";
             this.txt_DoctorsRecommendationHomoeo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_DoctorsRecommendationHomoeo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txt_DoctorsRecommendationHomoeo.Size = new System.Drawing.Size(658, 59);
+            this.txt_DoctorsRecommendationHomoeo.Size = new System.Drawing.Size(723, 59);
             this.txt_DoctorsRecommendationHomoeo.TabIndex = 33;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(722, 129);
+            this.label20.Location = new System.Drawing.Point(789, 129);
             this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(75, 27);
@@ -1062,7 +1072,7 @@
             // 
             // btn_AddTreamentHomoeo
             // 
-            this.btn_AddTreamentHomoeo.Location = new System.Drawing.Point(516, 197);
+            this.btn_AddTreamentHomoeo.Location = new System.Drawing.Point(583, 197);
             this.btn_AddTreamentHomoeo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_AddTreamentHomoeo.Name = "btn_AddTreamentHomoeo";
             this.btn_AddTreamentHomoeo.Size = new System.Drawing.Size(142, 32);
@@ -1085,18 +1095,51 @@
             this.dataGridViewButtonColumn1});
             this.dgv_TreatmentHomoeo.DataSource = this.medicinesBindingSource;
             this.dgv_TreatmentHomoeo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_TreatmentHomoeo.Location = new System.Drawing.Point(0, 235);
+            this.dgv_TreatmentHomoeo.Location = new System.Drawing.Point(2, 235);
             this.dgv_TreatmentHomoeo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgv_TreatmentHomoeo.Name = "dgv_TreatmentHomoeo";
-            this.dgv_TreatmentHomoeo.Size = new System.Drawing.Size(658, 317);
+            this.dgv_TreatmentHomoeo.Size = new System.Drawing.Size(723, 357);
             this.dgv_TreatmentHomoeo.TabIndex = 34;
             this.dgv_TreatmentHomoeo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TreatmentHomoeo_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "MedName";
+            this.dataGridViewTextBoxColumn2.HeaderText = "علاج";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Type";
+            this.dataGridViewTextBoxColumn3.HeaderText = "طرز";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Potency";
+            this.dataGridViewTextBoxColumn4.HeaderText = "قوت";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewButtonColumn1
+            // 
+            this.dataGridViewButtonColumn1.HeaderText = "حزف کریں";
+            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            this.dataGridViewButtonColumn1.Text = "حزف کریں";
+            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Location = new System.Drawing.Point(674, 232);
+            this.label21.Location = new System.Drawing.Point(741, 232);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(123, 27);
@@ -1110,7 +1153,7 @@
             this.tabPage5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage5.Size = new System.Drawing.Size(803, 561);
+            this.tabPage5.Size = new System.Drawing.Size(870, 601);
             this.tabPage5.TabIndex = 5;
             this.tabPage5.Text = "ایلوپیتھی";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -1143,14 +1186,14 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 69F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(799, 555);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(866, 595);
             this.tableLayoutPanel6.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(662, 6);
+            this.label4.Location = new System.Drawing.Point(729, 6);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(135, 27);
@@ -1163,10 +1206,10 @@
             this.cmb_TreatmentNameAloe.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmb_TreatmentNameAloe.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmb_TreatmentNameAloe.FormattingEnabled = true;
-            this.cmb_TreatmentNameAloe.Location = new System.Drawing.Point(0, 3);
+            this.cmb_TreatmentNameAloe.Location = new System.Drawing.Point(2, 9);
             this.cmb_TreatmentNameAloe.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmb_TreatmentNameAloe.Name = "cmb_TreatmentNameAloe";
-            this.cmb_TreatmentNameAloe.Size = new System.Drawing.Size(658, 35);
+            this.cmb_TreatmentNameAloe.Size = new System.Drawing.Size(723, 35);
             this.cmb_TreatmentNameAloe.TabIndex = 23;
             // 
             // lbl_ErrorTreatmentNameAloe
@@ -1174,10 +1217,10 @@
             this.lbl_ErrorTreatmentNameAloe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ErrorTreatmentNameAloe.AutoSize = true;
             this.lbl_ErrorTreatmentNameAloe.Font = new System.Drawing.Font("Jameel Noori Nastaleeq", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ErrorTreatmentNameAloe.Location = new System.Drawing.Point(0, 41);
+            this.lbl_ErrorTreatmentNameAloe.Location = new System.Drawing.Point(2, 41);
             this.lbl_ErrorTreatmentNameAloe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ErrorTreatmentNameAloe.Name = "lbl_ErrorTreatmentNameAloe";
-            this.lbl_ErrorTreatmentNameAloe.Size = new System.Drawing.Size(658, 22);
+            this.lbl_ErrorTreatmentNameAloe.Size = new System.Drawing.Size(723, 22);
             this.lbl_ErrorTreatmentNameAloe.TabIndex = 25;
             // 
             // cmb_PotencyAloe
@@ -1186,17 +1229,17 @@
             this.cmb_PotencyAloe.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cmb_PotencyAloe.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmb_PotencyAloe.FormattingEnabled = true;
-            this.cmb_PotencyAloe.Location = new System.Drawing.Point(0, 68);
+            this.cmb_PotencyAloe.Location = new System.Drawing.Point(2, 74);
             this.cmb_PotencyAloe.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmb_PotencyAloe.Name = "cmb_PotencyAloe";
-            this.cmb_PotencyAloe.Size = new System.Drawing.Size(658, 35);
+            this.cmb_PotencyAloe.Size = new System.Drawing.Size(723, 35);
             this.cmb_PotencyAloe.TabIndex = 37;
             // 
             // label22
             // 
             this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(662, 71);
+            this.label22.Location = new System.Drawing.Point(729, 71);
             this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(135, 27);
@@ -1208,28 +1251,28 @@
             this.lbl_ErrorPotencyAloe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_ErrorPotencyAloe.AutoSize = true;
             this.lbl_ErrorPotencyAloe.Font = new System.Drawing.Font("Jameel Noori Nastaleeq", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ErrorPotencyAloe.Location = new System.Drawing.Point(0, 105);
+            this.lbl_ErrorPotencyAloe.Location = new System.Drawing.Point(2, 105);
             this.lbl_ErrorPotencyAloe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ErrorPotencyAloe.Name = "lbl_ErrorPotencyAloe";
-            this.lbl_ErrorPotencyAloe.Size = new System.Drawing.Size(658, 22);
+            this.lbl_ErrorPotencyAloe.Size = new System.Drawing.Size(723, 22);
             this.lbl_ErrorPotencyAloe.TabIndex = 32;
             // 
             // txt_DoctorsRecommendationAloe
             // 
             this.txt_DoctorsRecommendationAloe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_DoctorsRecommendationAloe.Location = new System.Drawing.Point(0, 132);
+            this.txt_DoctorsRecommendationAloe.Location = new System.Drawing.Point(2, 132);
             this.txt_DoctorsRecommendationAloe.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_DoctorsRecommendationAloe.Multiline = true;
             this.txt_DoctorsRecommendationAloe.Name = "txt_DoctorsRecommendationAloe";
             this.txt_DoctorsRecommendationAloe.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_DoctorsRecommendationAloe.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txt_DoctorsRecommendationAloe.Size = new System.Drawing.Size(658, 59);
+            this.txt_DoctorsRecommendationAloe.Size = new System.Drawing.Size(723, 59);
             this.txt_DoctorsRecommendationAloe.TabIndex = 33;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(722, 129);
+            this.label24.Location = new System.Drawing.Point(789, 129);
             this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(75, 27);
@@ -1238,7 +1281,7 @@
             // 
             // btn_AddTreatmentAloe
             // 
-            this.btn_AddTreatmentAloe.Location = new System.Drawing.Point(516, 197);
+            this.btn_AddTreatmentAloe.Location = new System.Drawing.Point(583, 197);
             this.btn_AddTreatmentAloe.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_AddTreatmentAloe.Name = "btn_AddTreatmentAloe";
             this.btn_AddTreatmentAloe.Size = new System.Drawing.Size(142, 32);
@@ -1261,18 +1304,51 @@
             this.dataGridViewButtonColumn2});
             this.dgv_TreatmentAloe.DataSource = this.medicinesBindingSource;
             this.dgv_TreatmentAloe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_TreatmentAloe.Location = new System.Drawing.Point(0, 235);
+            this.dgv_TreatmentAloe.Location = new System.Drawing.Point(2, 235);
             this.dgv_TreatmentAloe.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgv_TreatmentAloe.Name = "dgv_TreatmentAloe";
-            this.dgv_TreatmentAloe.Size = new System.Drawing.Size(658, 317);
+            this.dgv_TreatmentAloe.Size = new System.Drawing.Size(723, 357);
             this.dgv_TreatmentAloe.TabIndex = 34;
             this.dgv_TreatmentAloe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TreatmentAloe_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "MedName";
+            this.dataGridViewTextBoxColumn6.HeaderText = "علاج";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Type";
+            this.dataGridViewTextBoxColumn7.HeaderText = "طرز";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Potency";
+            this.dataGridViewTextBoxColumn8.HeaderText = "قوت";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewButtonColumn2
+            // 
+            this.dataGridViewButtonColumn2.HeaderText = "حزف کریں";
+            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
+            this.dataGridViewButtonColumn2.Text = "حزف کریں";
+            this.dataGridViewButtonColumn2.UseColumnTextForButtonValue = true;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Location = new System.Drawing.Point(674, 232);
+            this.label25.Location = new System.Drawing.Point(741, 232);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(123, 27);
@@ -1364,149 +1440,6 @@
             // 
             this.medicinesTableAdapter.ClearBeforeFill = true;
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // symptomNameDataGridViewTextBoxColumn
-            // 
-            this.symptomNameDataGridViewTextBoxColumn.DataPropertyName = "SymptomName";
-            this.symptomNameDataGridViewTextBoxColumn.HeaderText = "نام";
-            this.symptomNameDataGridViewTextBoxColumn.Name = "symptomNameDataGridViewTextBoxColumn";
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "حزف کریں";
-            this.Delete.Name = "Delete";
-            this.Delete.Text = "حزف کریں";
-            this.Delete.UseColumnTextForButtonValue = true;
-            // 
-            // reasonIdDataGridViewTextBoxColumn
-            // 
-            this.reasonIdDataGridViewTextBoxColumn.DataPropertyName = "ReasonId";
-            this.reasonIdDataGridViewTextBoxColumn.HeaderText = "ReasonId";
-            this.reasonIdDataGridViewTextBoxColumn.Name = "reasonIdDataGridViewTextBoxColumn";
-            this.reasonIdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.reasonIdDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // reasonNameDataGridViewTextBoxColumn
-            // 
-            this.reasonNameDataGridViewTextBoxColumn.DataPropertyName = "ReasonName";
-            this.reasonNameDataGridViewTextBoxColumn.HeaderText = "سبب";
-            this.reasonNameDataGridViewTextBoxColumn.Name = "reasonNameDataGridViewTextBoxColumn";
-            // 
-            // DeleteReason
-            // 
-            this.DeleteReason.DataPropertyName = "ReasonId";
-            this.DeleteReason.HeaderText = "حزف کریں";
-            this.DeleteReason.Name = "DeleteReason";
-            this.DeleteReason.ReadOnly = true;
-            this.DeleteReason.Text = "حزف کریں";
-            this.DeleteReason.UseColumnTextForButtonValue = true;
-            // 
-            // idDataGridViewTextBoxColumn1
-            // 
-            this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
-            this.idDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // medNameDataGridViewTextBoxColumn
-            // 
-            this.medNameDataGridViewTextBoxColumn.DataPropertyName = "MedName";
-            this.medNameDataGridViewTextBoxColumn.HeaderText = "علاج";
-            this.medNameDataGridViewTextBoxColumn.Name = "medNameDataGridViewTextBoxColumn";
-            // 
-            // typeDataGridViewTextBoxColumn
-            // 
-            this.typeDataGridViewTextBoxColumn.DataPropertyName = "Type";
-            this.typeDataGridViewTextBoxColumn.HeaderText = "طرز";
-            this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
-            // 
-            // potencyDataGridViewTextBoxColumn
-            // 
-            this.potencyDataGridViewTextBoxColumn.DataPropertyName = "Potency";
-            this.potencyDataGridViewTextBoxColumn.HeaderText = "قوت";
-            this.potencyDataGridViewTextBoxColumn.Name = "potencyDataGridViewTextBoxColumn";
-            // 
-            // DeleteMedName1
-            // 
-            this.DeleteMedName1.HeaderText = "حزف کریں";
-            this.DeleteMedName1.Name = "DeleteMedName1";
-            this.DeleteMedName1.Text = "حزف کریں";
-            this.DeleteMedName1.UseColumnTextForButtonValue = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "MedName";
-            this.dataGridViewTextBoxColumn2.HeaderText = "علاج";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Type";
-            this.dataGridViewTextBoxColumn3.HeaderText = "طرز";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Potency";
-            this.dataGridViewTextBoxColumn4.HeaderText = "قوت";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewButtonColumn1
-            // 
-            this.dataGridViewButtonColumn1.HeaderText = "حزف کریں";
-            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            this.dataGridViewButtonColumn1.Text = "حزف کریں";
-            this.dataGridViewButtonColumn1.UseColumnTextForButtonValue = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "MedName";
-            this.dataGridViewTextBoxColumn6.HeaderText = "علاج";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Type";
-            this.dataGridViewTextBoxColumn7.HeaderText = "طرز";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Potency";
-            this.dataGridViewTextBoxColumn8.HeaderText = "قوت";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewButtonColumn2
-            // 
-            this.dataGridViewButtonColumn2.HeaderText = "حزف کریں";
-            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
-            this.dataGridViewButtonColumn2.Text = "حزف کریں";
-            this.dataGridViewButtonColumn2.UseColumnTextForButtonValue = true;
-            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1514,17 +1447,10 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(878, 641);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.EmptyPanel);
-            this.Controls.Add(this.TaskbarPanel);
-            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "MainPage";
             this.Text = "میڈیکل انسایؑکلوپیڈیا";
             this.Load += new System.EventHandler(this.MainPage_Load);
-            this.TaskbarPanel.ResumeLayout(false);
-            this.TaskbarPanel.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
@@ -1567,14 +1493,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel TaskbarPanel;
-        private System.Windows.Forms.Panel EmptyPanel;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem فائلToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem انتظامیامورToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem بیماریوںکیتفصیلاتToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem رپورٹسToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TabControl body;

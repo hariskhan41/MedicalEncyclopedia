@@ -9,6 +9,8 @@ namespace med_enc
 {
     class CatagoryDetails
     {
+        public static string temp { get; set; }
+
         public int categoryId { get; set; }
 
         public string catagoryName { get; set; }
@@ -25,6 +27,19 @@ namespace med_enc
                 cmb.Items.Add(c.Text);
             }
             cmb.Refresh();
+        }
+
+        public bool categoryAlreadyExistsEdit(string name)
+        {
+            MedDbEntities db = new MedDbEntities();
+            foreach (Category c in db.Categories)
+            {
+                if (c.Text == name && c.Text != temp)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public bool categoryAlreadyExists(string name)
@@ -85,11 +100,34 @@ namespace med_enc
             }
         }
 
+        
+
         public bool Edit()
         {
             MedDbEntities db = new MedDbEntities();
             Category catTbl = new Category();
-            if (categoryAlreadyExists(catagoryName))
+            //foreach (Category c in db.Categories)
+            //{
+            //    if (c.Id == categoryId)
+            //    {
+            //        c.Text = catagoryName;
+            //        c.Description = catagoryDescription;
+            //        int parentCatId = getCatagoryIdFromCatagoryName(catagoryParentName);
+            //        if (parentCatId != -1)
+            //        {
+            //            c.ParentId = parentCatId;
+            //        }
+            //        else
+            //        {
+            //            c.ParentId = null;
+            //        }
+
+            //        break;
+            //    }
+            //}
+            //db.SaveChanges();
+            //return true;
+            if (categoryAlreadyExistsEdit(catagoryName))
             {
                 return false;
             }
@@ -110,7 +148,7 @@ namespace med_enc
                         {
                             c.ParentId = null;
                         }
-                        
+
                         break;
                     }
                 }
