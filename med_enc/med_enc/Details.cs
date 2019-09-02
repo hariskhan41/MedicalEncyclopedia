@@ -12,6 +12,7 @@ namespace med_enc
 {
     public partial class Details : Form
     {
+        public static int printId;
         public Details()
         {
             InitializeComponent();
@@ -47,6 +48,17 @@ namespace med_enc
         {
             MainPage m = new MainPage();
             m.Show();
+        }
+
+        private void dgv_Details_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string val = dgv_Details.Rows[e.RowIndex].Cells[e.ColumnIndex].FormattedValue.ToString();
+            if (val == "Print Report")
+            {
+                printId = Convert.ToInt32(dgv_Details.Rows[e.RowIndex].Cells[0].FormattedValue.ToString());
+                Report r = new Report();
+                r.Show();
+            }
         }
     }
 }

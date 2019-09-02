@@ -269,6 +269,9 @@ namespace med_enc
             dgv_Causes.Rows.Clear();
             //Causes c = new Causes();
             //c.AddCausesToComboBox(cmb_CauseName);
+            //cmb_CauseName.Text = "";
+
+
 
             dgv_MedicalCure.DataSource = null;
             dgv_MedicalCure.Rows.Clear();

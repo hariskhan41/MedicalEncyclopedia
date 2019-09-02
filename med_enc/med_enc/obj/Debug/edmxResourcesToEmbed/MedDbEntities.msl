@@ -139,5 +139,26 @@
         <ScalarProperty Name="ReasonId" ColumnName="DiseaseReason" />
       </EndProperty>
     </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="Reasons1" FunctionName="MedDbModel.Store.Reasons" />
+    <FunctionImportMapping FunctionImportName="DiseaseCategoriesProc" FunctionName="MedDbModel.Store.DiseaseCategoriesProc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MedDbModel.DiseaseCategoriesProc_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="English_Name" ColumnName="English Name" />
+          <ScalarProperty Name="Urdu_Name" ColumnName="Urdu Name" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MedicinesProc" FunctionName="MedDbModel.Store.MedicinesProc">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="MedDbModel.MedicinesProc_Result">
+          <ScalarProperty Name="MedName" ColumnName="MedName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SymptomsProc" FunctionName="MedDbModel.Store.SymptomsProc" />
   </EntityContainerMapping>
 </Mapping>

@@ -12,6 +12,8 @@ namespace med_enc
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class MedDbEntities : DbContext
     {
@@ -37,5 +39,41 @@ namespace med_enc
         public virtual DbSet<Symptom> Symptoms { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
+    
+        public virtual ObjectResult<string> Reasons1(Nullable<int> id)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("Id", id) :
+                new ObjectParameter("Id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("Reasons1", idParameter);
+        }
+    
+        public virtual ObjectResult<DiseaseCategoriesProc_Result> DiseaseCategoriesProc(Nullable<int> id)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("Id", id) :
+                new ObjectParameter("Id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<DiseaseCategoriesProc_Result>("DiseaseCategoriesProc", idParameter);
+        }
+    
+        public virtual ObjectResult<MedicinesProc_Result> MedicinesProc(Nullable<int> id)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("Id", id) :
+                new ObjectParameter("Id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<MedicinesProc_Result>("MedicinesProc", idParameter);
+        }
+    
+        public virtual ObjectResult<string> SymptomsProc(Nullable<int> id)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("Id", id) :
+                new ObjectParameter("Id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("SymptomsProc", idParameter);
+        }
     }
 }

@@ -25,19 +25,11 @@ namespace med_enc
             
         }
 
-        private void Categories_Load(object sender, EventArgs e)
+        public void load()
         {
-            // TODO: This line of code loads data into the 'medDbDataSet.Category' table. You can move, or remove it, as needed.
-            this.categoryTableAdapter.Fill(this.medDbDataSet.Category);
-            MedDbEntities db = new MedDbEntities();
             CatagoryDetails catDetails = new CatagoryDetails();
-            catDetails.AddCatagoryParentNameToCombobox(cmb_CategoryHeadName);
-            var p = db.Categories.ToList();
-            DataTable dt = new DataTable();
-            dgv_CategoryDetails.DataSource = db.Categories.ToList();
-            
             int rows = dgv_CategoryDetails.Rows.Count;
-            
+
             for (int i = 0; i < rows; i++)
             {
                 string s = dgv_CategoryDetails.Rows[i].Cells[2].FormattedValue.ToString();
@@ -46,7 +38,32 @@ namespace med_enc
                     dgv_CategoryDetails.Rows[i].Cells[3].Value = catDetails.getCategoryNameFromId(Convert.ToInt32(s));
                 }
             }
+        }
+
+        private void Categories_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'medDbDataSet.Category' table. You can move, or remove it, as needed.
+            this.categoryTableAdapter.Fill(this.medDbDataSet.Category);
+            MedDbEntities db = new MedDbEntities();
+            CatagoryDetails catDetails = new CatagoryDetails();
+            catDetails.AddCatagoryParentNameToCombobox(cmb_CategoryHeadName);
+            //var p = db.Categories.ToList();
+            //DataTable dt = new DataTable();
+            dgv_CategoryDetails.DataSource = db.Categories.ToList();
+            //dgv_CategoryDetails.Refresh();
+            //int rows = dgv_CategoryDetails.Rows.Count;
             
+            //for (int i = 0; i < rows; i++)
+            //{
+            //    string s = dgv_CategoryDetails.Rows[i].Cells[2].FormattedValue.ToString();
+            //    if (s != "")
+            //    {
+            //        dgv_CategoryDetails.Rows[i].Cells[3].Value = catDetails.getCategoryNameFromId(Convert.ToInt32(s));
+            //    }
+            //}
+            //dgv_CategoryDetails.Refresh();
+            Task.Delay(100).ContinueWith(t => load());
+
         }
 
         private void dgv_CategoryDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -84,6 +101,12 @@ namespace med_enc
 
         private void btn_SaveCategory_Click_1(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txt_CategoryDetails.Text) || string.IsNullOrWhiteSpace(txt_CategoryDetails.Text) || 
+                string.IsNullOrEmpty(txt_CategoryName.Text) || string.IsNullOrWhiteSpace(txt_CategoryName.Text))
+            {
+                MessageBox.Show("کیٹیگری کا نام اور تفصیلات درج کریں");
+                return;
+            }
             if (editFlag == false)
             {
                 CatagoryDetails catDetails = new CatagoryDetails();

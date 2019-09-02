@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'E:\Internship\Internship\(Symptoms)\med_enc\med_enc\MedDbEntities.edmx'. 
+﻿// T4 code generation is enabled for model 'F:\UET\Internship\New folder\med_enc\med_enc\MedDbEntities.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

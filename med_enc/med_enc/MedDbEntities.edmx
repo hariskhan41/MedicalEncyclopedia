@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MedDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="MedDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AspNetRoles">
           <Key>
             <PropertyRef Name="Id" />
@@ -221,6 +221,18 @@ warning 6002: The table/view 'MedDb.dbo.AspNetUserLogins' does not have a primar
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="DiseaseCategoriesProc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="MedicinesProc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Reasons" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SymptomsProc" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+        </Function>
         <EntityContainer Name="MedDbModelStoreContainer">
           <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
@@ -271,8 +283,7 @@ warning 6002: The table/view 'MedDb.dbo.AspNetUserLogins' does not have a primar
             <End Role="MedicineReasons" EntitySet="MedicineReasons" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MedDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -477,7 +488,30 @@ warning 6002: The table/view 'MedDb.dbo.AspNetUserLogins' does not have a primar
             <End Role="Disease" EntitySet="Diseases" />
             <End Role="Reason" EntitySet="Reasons" />
           </AssociationSet>
+          <FunctionImport Name="Reasons1" ReturnType="Collection(String)">
+          <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="DiseaseCategoriesProc" ReturnType="Collection(MedDbModel.DiseaseCategoriesProc_Result)">
+          <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="MedicinesProc" ReturnType="Collection(MedDbModel.MedicinesProc_Result)">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SymptomsProc" ReturnType="Collection(String)">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
+        <ComplexType Name="DiseaseCategoriesProc_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="English_Name" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Urdu_Name" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Category_Name" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="MedicinesProc_Result">
+          <Property Type="String" Name="MedName" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Type" Nullable="true" MaxLength="50" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -622,6 +656,27 @@ warning 6002: The table/view 'MedDb.dbo.AspNetUserLogins' does not have a primar
               <ScalarProperty Name="ReasonId" ColumnName="DiseaseReason" />
             </EndProperty>
           </AssociationSetMapping>
+          <FunctionImportMapping FunctionImportName="Reasons1" FunctionName="MedDbModel.Store.Reasons" />
+          <FunctionImportMapping FunctionImportName="DiseaseCategoriesProc" FunctionName="MedDbModel.Store.DiseaseCategoriesProc">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MedDbModel.DiseaseCategoriesProc_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="English_Name" ColumnName="English Name" />
+                <ScalarProperty Name="Urdu_Name" ColumnName="Urdu Name" />
+                <ScalarProperty Name="Category_Name" ColumnName="Category Name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="MedicinesProc" FunctionName="MedDbModel.Store.MedicinesProc">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MedDbModel.MedicinesProc_Result">
+                <ScalarProperty Name="MedName" ColumnName="MedName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SymptomsProc" FunctionName="MedDbModel.Store.SymptomsProc" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

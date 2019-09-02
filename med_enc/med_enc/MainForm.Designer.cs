@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.فائلToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.نئیبیماریToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.نیئبیماریToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.تفصیلاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +45,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuStrip.Size = new System.Drawing.Size(878, 35);
+            this.menuStrip.Size = new System.Drawing.Size(894, 35);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -63,21 +63,21 @@
             // نئیبیماریToolStripMenuItem
             // 
             this.نئیبیماریToolStripMenuItem.Name = "نئیبیماریToolStripMenuItem";
-            this.نئیبیماریToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.نئیبیماریToolStripMenuItem.Size = new System.Drawing.Size(125, 32);
             this.نئیبیماریToolStripMenuItem.Text = "نئی بیماری";
             this.نئیبیماریToolStripMenuItem.Click += new System.EventHandler(this.نئیبیماریToolStripMenuItem_Click);
             // 
             // نیئبیماریToolStripMenuItem
             // 
             this.نیئبیماریToolStripMenuItem.Name = "نیئبیماریToolStripMenuItem";
-            this.نیئبیماریToolStripMenuItem.Size = new System.Drawing.Size(152, 32);
+            this.نیئبیماریToolStripMenuItem.Size = new System.Drawing.Size(125, 32);
             this.نیئبیماریToolStripMenuItem.Text = "نئی کیٹیگری";
             this.نیئبیماریToolStripMenuItem.Click += new System.EventHandler(this.نیئبیماریToolStripMenuItem_Click);
             // 
             // تفصیلاتToolStripMenuItem
             // 
             this.تفصیلاتToolStripMenuItem.Name = "تفصیلاتToolStripMenuItem";
-            this.تفصیلاتToolStripMenuItem.Size = new System.Drawing.Size(152, 32);
+            this.تفصیلاتToolStripMenuItem.Size = new System.Drawing.Size(125, 32);
             this.تفصیلاتToolStripMenuItem.Text = "تفصیلات";
             this.تفصیلاتToolStripMenuItem.Click += new System.EventHandler(this.تفصیلاتToolStripMenuItem_Click);
             // 
@@ -85,7 +85,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 641);
+            this.AutoScrollMinSize = new System.Drawing.Size(894, 680);
+            this.ClientSize = new System.Drawing.Size(892, 675);
             this.Controls.Add(this.menuStrip);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;

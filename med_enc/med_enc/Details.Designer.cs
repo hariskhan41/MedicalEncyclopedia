@@ -55,6 +55,7 @@
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Text = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Print = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.symptomsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medDbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reasonBindingSource)).BeginInit();
@@ -136,7 +137,8 @@
             this.updatedOnDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn,
             this.categoryIdDataGridViewTextBoxColumn,
-            this.Text});
+            this.Text,
+            this.Print});
             this.dgv_Details.DataSource = this.diseaseBindingSource;
             this.dgv_Details.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_Details.Location = new System.Drawing.Point(0, 0);
@@ -145,6 +147,7 @@
             this.dgv_Details.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgv_Details.Size = new System.Drawing.Size(878, 641);
             this.dgv_Details.TabIndex = 0;
+            this.dgv_Details.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Details_CellContentClick);
             // 
             // diseaseBindingSource
             // 
@@ -233,6 +236,13 @@
             this.Text.HeaderText = "کیٹیگری کا نام";
             this.Text.Name = "Text";
             // 
+            // Print
+            // 
+            this.Print.HeaderText = "رپورٹ";
+            this.Print.Name = "Print";
+            this.Print.Text = "Print Report";
+            this.Print.UseColumnTextForButtonValue = true;
+            // 
             // Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 27F);
@@ -288,5 +298,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Text;
+        private System.Windows.Forms.DataGridViewButtonColumn Print;
     }
 }

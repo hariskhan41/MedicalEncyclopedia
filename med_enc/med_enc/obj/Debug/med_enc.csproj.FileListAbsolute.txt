@@ -97,3 +97,39 @@ C:\Users\haris\Desktop\pushQB\med_enc\med_enc\obj\Debug\med_enc.MainPage.resourc
 C:\Users\haris\Desktop\pushQB\med_enc\med_enc\obj\Debug\med_enc.MainForm.resources
 C:\Users\haris\Desktop\pushQB\med_enc\med_enc\obj\Debug\med_enc.Properties.Resources.resources
 C:\Users\haris\Desktop\pushQB\med_enc\med_enc\obj\Debug\med_enc.csproj.GenerateResource.Cache
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\med_enc.exe.config
+F:\UET\Internship\New folder\med_enc\med_enc\obj\Debug\med_enc.exe
+F:\UET\Internship\New folder\med_enc\med_enc\obj\Debug\med_enc.pdb
+F:\UET\Internship\New folder\med_enc\med_enc\obj\Debug\med_enc.csprojResolveAssemblyReference.cache
+F:\UET\Internship\New folder\med_enc\med_enc\obj\Debug\med_enc.Categories.resources
+F:\UET\Internship\New folder\med_enc\med_enc\obj\Debug\med_enc.Details.resources
+F:\UET\Internship\New folder\med_enc\med_enc\obj\Debug\med_enc.MainPage.resources
+F:\UET\Internship\New folder\med_enc\med_enc\obj\Debug\med_enc.MainForm.resources
+F:\UET\Internship\New folder\med_enc\med_enc\obj\Debug\med_enc.Properties.Resources.resources
+F:\UET\Internship\New folder\med_enc\med_enc\obj\Debug\med_enc.Report.resources
+F:\UET\Internship\New folder\med_enc\med_enc\obj\Debug\med_enc.csproj.GenerateResource.Cache
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\med_enc.exe
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\med_enc.pdb
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\CrystalDecisions.ReportSource.dll
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\CrystalDecisions.Shared.dll
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\CrystalDecisions.Windows.Forms.dll
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\EntityFramework.dll
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\EntityFramework.SqlServer.dll
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\FlashControlV71.dll
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\ShockwaveFlashObjects.dll
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\stdole.dll
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\EntityFramework.xml
+F:\UET\Internship\New folder\med_enc\med_enc\bin\Debug\EntityFramework.SqlServer.xml

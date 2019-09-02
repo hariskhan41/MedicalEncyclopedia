@@ -201,5 +201,28 @@
       <End Role="Disease" EntitySet="Diseases" />
       <End Role="Reason" EntitySet="Reasons" />
     </AssociationSet>
+    <FunctionImport Name="Reasons1" ReturnType="Collection(String)">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DiseaseCategoriesProc" ReturnType="Collection(MedDbModel.DiseaseCategoriesProc_Result)">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MedicinesProc" ReturnType="Collection(MedDbModel.MedicinesProc_Result)">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SymptomsProc" ReturnType="Collection(String)">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
+  <ComplexType Name="DiseaseCategoriesProc_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="English_Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Urdu_Name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Category_Name" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="MedicinesProc_Result">
+    <Property Type="String" Name="MedName" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="String" Name="Type" Nullable="true" MaxLength="50" />
+  </ComplexType>
 </Schema>

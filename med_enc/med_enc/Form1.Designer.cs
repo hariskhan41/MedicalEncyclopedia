@@ -289,7 +289,7 @@
             this.Gen_info.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Gen_info.Name = "Gen_info";
             this.Gen_info.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.Gen_info.Size = new System.Drawing.Size(870, 601);
+            this.Gen_info.Size = new System.Drawing.Size(899, 645);
             this.Gen_info.TabIndex = 0;
             this.Gen_info.Text = "عام معلومات";
             this.Gen_info.UseVisualStyleBackColor = true;
@@ -298,7 +298,7 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 662F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 727F));
             this.tableLayoutPanel1.Controls.Add(this.label18, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txt_DiseaseUrduName, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txt_DiseaseEnglishName, 1, 2);
@@ -320,7 +320,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 270F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(866, 595);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(895, 639);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // label18
@@ -328,7 +328,7 @@
             this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Jameel Noori Nastaleeq", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(729, 8);
+            this.label18.Location = new System.Drawing.Point(758, 8);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(135, 27);
@@ -342,7 +342,7 @@
             this.txt_DiseaseUrduName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_DiseaseUrduName.Multiline = true;
             this.txt_DiseaseUrduName.Name = "txt_DiseaseUrduName";
-            this.txt_DiseaseUrduName.Size = new System.Drawing.Size(723, 38);
+            this.txt_DiseaseUrduName.Size = new System.Drawing.Size(752, 38);
             this.txt_DiseaseUrduName.TabIndex = 14;
             // 
             // txt_DiseaseEnglishName
@@ -353,7 +353,7 @@
             this.txt_DiseaseEnglishName.Multiline = true;
             this.txt_DiseaseEnglishName.Name = "txt_DiseaseEnglishName";
             this.txt_DiseaseEnglishName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txt_DiseaseEnglishName.Size = new System.Drawing.Size(723, 41);
+            this.txt_DiseaseEnglishName.Size = new System.Drawing.Size(752, 41);
             this.txt_DiseaseEnglishName.TabIndex = 15;
             // 
             // label17
@@ -361,7 +361,7 @@
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Jameel Noori Nastaleeq", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(729, 78);
+            this.label17.Location = new System.Drawing.Point(758, 78);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(135, 27);
@@ -375,13 +375,13 @@
             this.txt_DiseaseDetails.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txt_DiseaseDetails.Multiline = true;
             this.txt_DiseaseDetails.Name = "txt_DiseaseDetails";
-            this.txt_DiseaseDetails.Size = new System.Drawing.Size(723, 408);
+            this.txt_DiseaseDetails.Size = new System.Drawing.Size(752, 452);
             this.txt_DiseaseDetails.TabIndex = 17;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(787, 181);
+            this.label15.Location = new System.Drawing.Point(816, 181);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(77, 27);
@@ -393,7 +393,7 @@
             this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Jameel Noori Nastaleeq", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(729, 148);
+            this.label16.Location = new System.Drawing.Point(758, 148);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(135, 27);
@@ -408,7 +408,7 @@
             this.cmb_DiseaseCategory.Location = new System.Drawing.Point(2, 151);
             this.cmb_DiseaseCategory.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmb_DiseaseCategory.Name = "cmb_DiseaseCategory";
-            this.cmb_DiseaseCategory.Size = new System.Drawing.Size(723, 35);
+            this.cmb_DiseaseCategory.Size = new System.Drawing.Size(752, 35);
             this.cmb_DiseaseCategory.TabIndex = 0;
             // 
             // lbl_ErrorUrduName
@@ -419,7 +419,7 @@
             this.lbl_ErrorUrduName.Location = new System.Drawing.Point(2, 45);
             this.lbl_ErrorUrduName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ErrorUrduName.Name = "lbl_ErrorUrduName";
-            this.lbl_ErrorUrduName.Size = new System.Drawing.Size(723, 22);
+            this.lbl_ErrorUrduName.Size = new System.Drawing.Size(752, 22);
             this.lbl_ErrorUrduName.TabIndex = 18;
             // 
             // lbl_ErrorEnglishName
@@ -430,7 +430,7 @@
             this.lbl_ErrorEnglishName.Location = new System.Drawing.Point(2, 117);
             this.lbl_ErrorEnglishName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ErrorEnglishName.Name = "lbl_ErrorEnglishName";
-            this.lbl_ErrorEnglishName.Size = new System.Drawing.Size(723, 22);
+            this.lbl_ErrorEnglishName.Size = new System.Drawing.Size(752, 22);
             this.lbl_ErrorEnglishName.TabIndex = 19;
             // 
             // tabPage2
@@ -449,7 +449,7 @@
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 662F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 727F));
             this.tableLayoutPanel2.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_AddSymptoms, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.dgv_symptoms, 1, 3);
@@ -589,7 +589,7 @@
             // 
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 662F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 756F));
             this.tableLayoutPanel3.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label2, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.btn_AddCause, 1, 2);
@@ -653,10 +653,10 @@
             this.DeleteReason});
             this.dgv_Causes.DataSource = this.reasonBindingSource;
             this.dgv_Causes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_Causes.Location = new System.Drawing.Point(2, 109);
+            this.dgv_Causes.Location = new System.Drawing.Point(-27, 109);
             this.dgv_Causes.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgv_Causes.Name = "dgv_Causes";
-            this.dgv_Causes.Size = new System.Drawing.Size(723, 483);
+            this.dgv_Causes.Size = new System.Drawing.Size(752, 483);
             this.dgv_Causes.TabIndex = 15;
             this.dgv_Causes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Causes_CellContentClick);
             // 
@@ -698,23 +698,25 @@
             this.lbl_errorCauseName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_errorCauseName.AutoSize = true;
             this.lbl_errorCauseName.Font = new System.Drawing.Font("Jameel Noori Nastaleeq", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_errorCauseName.Location = new System.Drawing.Point(2, 41);
+            this.lbl_errorCauseName.Location = new System.Drawing.Point(-27, 41);
             this.lbl_errorCauseName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_errorCauseName.Name = "lbl_errorCauseName";
-            this.lbl_errorCauseName.Size = new System.Drawing.Size(723, 22);
+            this.lbl_errorCauseName.Size = new System.Drawing.Size(752, 22);
             this.lbl_errorCauseName.TabIndex = 20;
             // 
             // cmb_CauseName
             // 
             this.cmb_CauseName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_CauseName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmb_CauseName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cmb_CauseName.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.reasonBindingSource, "ReasonName", true));
             this.cmb_CauseName.DataSource = this.reasonBindingSource;
             this.cmb_CauseName.DisplayMember = "ReasonName";
             this.cmb_CauseName.FormattingEnabled = true;
-            this.cmb_CauseName.Location = new System.Drawing.Point(2, 9);
+            this.cmb_CauseName.Location = new System.Drawing.Point(-27, 3);
             this.cmb_CauseName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmb_CauseName.Name = "cmb_CauseName";
-            this.cmb_CauseName.Size = new System.Drawing.Size(723, 35);
+            this.cmb_CauseName.Size = new System.Drawing.Size(752, 35);
             this.cmb_CauseName.TabIndex = 21;
             this.cmb_CauseName.ValueMember = "ReasonName";
             // 
@@ -725,7 +727,7 @@
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tabPage3.Size = new System.Drawing.Size(870, 601);
+            this.tabPage3.Size = new System.Drawing.Size(899, 645);
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "طبی علاج";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -734,7 +736,7 @@
             // 
             this.tableLayoutPanel4.ColumnCount = 2;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 662F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 727F));
             this.tableLayoutPanel4.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.cmb_MedicalCure, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.lbl_ErrorMedicalCureName, 1, 1);
@@ -758,14 +760,14 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(866, 595);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(895, 639);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(729, 6);
+            this.label3.Location = new System.Drawing.Point(758, 6);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(135, 27);
@@ -781,7 +783,7 @@
             this.cmb_MedicalCure.Location = new System.Drawing.Point(2, 9);
             this.cmb_MedicalCure.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmb_MedicalCure.Name = "cmb_MedicalCure";
-            this.cmb_MedicalCure.Size = new System.Drawing.Size(723, 35);
+            this.cmb_MedicalCure.Size = new System.Drawing.Size(752, 35);
             this.cmb_MedicalCure.TabIndex = 23;
             // 
             // lbl_ErrorMedicalCureName
@@ -792,7 +794,7 @@
             this.lbl_ErrorMedicalCureName.Location = new System.Drawing.Point(2, 41);
             this.lbl_ErrorMedicalCureName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ErrorMedicalCureName.Name = "lbl_ErrorMedicalCureName";
-            this.lbl_ErrorMedicalCureName.Size = new System.Drawing.Size(723, 22);
+            this.lbl_ErrorMedicalCureName.Size = new System.Drawing.Size(752, 22);
             this.lbl_ErrorMedicalCureName.TabIndex = 25;
             // 
             // cmb_Potency
@@ -804,14 +806,14 @@
             this.cmb_Potency.Location = new System.Drawing.Point(2, 75);
             this.cmb_Potency.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cmb_Potency.Name = "cmb_Potency";
-            this.cmb_Potency.Size = new System.Drawing.Size(723, 35);
+            this.cmb_Potency.Size = new System.Drawing.Size(752, 35);
             this.cmb_Potency.TabIndex = 37;
             // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(729, 72);
+            this.label6.Location = new System.Drawing.Point(758, 72);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(135, 27);
@@ -826,7 +828,7 @@
             this.lbl_ErrorPotency.Location = new System.Drawing.Point(2, 108);
             this.lbl_ErrorPotency.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_ErrorPotency.Name = "lbl_ErrorPotency";
-            this.lbl_ErrorPotency.Size = new System.Drawing.Size(723, 22);
+            this.lbl_ErrorPotency.Size = new System.Drawing.Size(752, 22);
             this.lbl_ErrorPotency.TabIndex = 32;
             // 
             // txt_DoctorsRecomendation
@@ -838,13 +840,13 @@
             this.txt_DoctorsRecomendation.Name = "txt_DoctorsRecomendation";
             this.txt_DoctorsRecomendation.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txt_DoctorsRecomendation.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txt_DoctorsRecomendation.Size = new System.Drawing.Size(723, 60);
+            this.txt_DoctorsRecomendation.Size = new System.Drawing.Size(752, 60);
             this.txt_DoctorsRecomendation.TabIndex = 33;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(789, 131);
+            this.label11.Location = new System.Drawing.Point(818, 131);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(75, 27);
@@ -853,7 +855,7 @@
             // 
             // btn_AddMedicalTreatment
             // 
-            this.btn_AddMedicalTreatment.Location = new System.Drawing.Point(583, 200);
+            this.btn_AddMedicalTreatment.Location = new System.Drawing.Point(612, 200);
             this.btn_AddMedicalTreatment.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btn_AddMedicalTreatment.Name = "btn_AddMedicalTreatment";
             this.btn_AddMedicalTreatment.Size = new System.Drawing.Size(142, 33);
@@ -879,7 +881,7 @@
             this.dgv_MedicalCure.Location = new System.Drawing.Point(2, 239);
             this.dgv_MedicalCure.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgv_MedicalCure.Name = "dgv_MedicalCure";
-            this.dgv_MedicalCure.Size = new System.Drawing.Size(723, 353);
+            this.dgv_MedicalCure.Size = new System.Drawing.Size(752, 397);
             this.dgv_MedicalCure.TabIndex = 34;
             this.dgv_MedicalCure.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_MedicalCure_CellContentClick);
             // 
@@ -930,7 +932,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Location = new System.Drawing.Point(741, 236);
+            this.label19.Location = new System.Drawing.Point(770, 236);
             this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(123, 27);
@@ -953,7 +955,7 @@
             // 
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 662F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 727F));
             this.tableLayoutPanel5.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.cmb_TreatmentNameHomoeo, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.lbl_ErrorTreatmentNameHomoeo, 1, 1);
@@ -1162,7 +1164,7 @@
             // 
             this.tableLayoutPanel6.ColumnCount = 2;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 662F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 727F));
             this.tableLayoutPanel6.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.cmb_TreatmentNameAloe, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.lbl_ErrorTreatmentNameAloe, 1, 1);
